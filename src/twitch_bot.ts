@@ -18,12 +18,13 @@ export class TwitchBot {
     private commandManger: CommandManager;
     private listener: EventSubListener;
 
-    constructor(authProvider: AuthProvider) {
+    constructor(authProvider: AuthProvider, eventAuth: AuthProvider) {
 
         this.authProvider = authProvider;
         this.apiClient = new ApiClient({ authProvider });
         this.chatClient = new ChatClient(authProvider, { channels: ['kleines_lucario'] });
-        this.listener = new EventSubListener(this.apiClient, new EnvPortAdapter({
+        const eventClient = new ApiClient({authProvider:eventAuth});
+        this.listener = new EventSubListener(eventClient, new EnvPortAdapter({
             hostName: 'kleineslucario.herokuapp.com'
         }), crypto.randomBytes(20).toString('hex'));
         
