@@ -9,7 +9,7 @@ export class SocialCommand extends CommandExecutor{
     }
 
     execute(command: string, sender: ChatUser,apiClient: ApiClient, args: string[]): boolean {
-    
+        console.log("test");
         return true;
     }
 
