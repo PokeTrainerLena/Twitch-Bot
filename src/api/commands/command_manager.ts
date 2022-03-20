@@ -8,7 +8,7 @@ export class CommandManager {
     private commands: Map<string, CommandExecutor> = new Map();
 
     constructor(chatClient: ChatClient, apiClient: ApiClient) {
-        chatClient.onMessage((channel,user,message,msg) => this.onCommand(channel,user,message,msg,apiClient));
+        chatClient.onMessage((channel,user,message,msg) => this.onCommand(channel,user,message,msg,apiClient, chatClient));
     }
 
     public add(command: CommandExecutor): void {
@@ -18,7 +18,7 @@ export class CommandManager {
         });
     }
 
-    private onCommand(channel: string, user: string, message: string, msg: PrivateMessage, apiClient: ApiClient): void {
+    private onCommand(channel: string, user: string, message: string, msg: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient): void {
         if(message.startsWith("!")) { 
             if (message.includes(" ")) {
                 const rawSplitteLine = message.split(" ");
@@ -26,13 +26,13 @@ export class CommandManager {
                 const command = rawCommand.replace('!','').toLowerCase();
                 const args = rawSplitteLine.slice(1, rawSplitteLine.length);
                 if (this.commands.has(command)) {
-                    const result = this.commands.get(command)!.execute(command, msg.userInfo, apiClient, args);
+                    const result = this.commands.get(command)!.execute(command,channel, msg, apiClient, chatClient, args);
                 }
             } else {
                 const command = message.replace('!','').toLowerCase();
                 const args: string[] = [];
                 if (this.commands.has(command)) {
-                    const result = this.commands.get(command)!.execute(command, msg.userInfo, apiClient, args);
+                    const result = this.commands.get(command)!.execute(command,channel, msg, apiClient, chatClient, args);
                 }
             }
          }

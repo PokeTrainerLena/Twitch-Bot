@@ -1,4 +1,4 @@
-import { ChatUser } from "twitch-chat-client";
+import { ChatClient, ChatUser, PrivateMessage } from "twitch-chat-client";
 import { ApiClient } from "twitch";
 
 
@@ -10,7 +10,7 @@ export abstract class CommandExecutor implements Command {
         this._name = name;
         this._alias = alias;
     }
-    abstract execute(command: string, sender: ChatUser,apiClient: ApiClient, args: string[]): boolean;
+    abstract execute(command: string, channel: string ,msg: PrivateMessage,apiClient: ApiClient, chatClient: ChatClient, args: string[]): boolean;
 
 
     get name(): string {
@@ -23,5 +23,5 @@ export abstract class CommandExecutor implements Command {
 }
 
 export interface Command {
-    execute(command: string, sender: ChatUser,apiClient: ApiClient, args: string[]): boolean;
+    execute(command: string, channel: string, msg: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): boolean;
 }

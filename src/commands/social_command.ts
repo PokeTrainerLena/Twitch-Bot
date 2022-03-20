@@ -1,4 +1,4 @@
-import { ChatUser } from "twitch-chat-client";
+import { ChatClient, ChatUser, PrivateMessage } from "twitch-chat-client";
 import { ApiClient } from "twitch";
 import { CommandExecutor } from "../api/commands/command_executor";
 
@@ -8,8 +8,8 @@ export class SocialCommand extends CommandExecutor{
         super("dc", ["yt", "dc"]);
     }
 
-    execute(command: string, sender: ChatUser,apiClient: ApiClient, args: string[]): boolean {
-        console.log("test");
+    execute(command: string,channel: string,  sender: PrivateMessage,apiClient: ApiClient, chatClient: ChatClient, args: string[]): boolean {
+            chatClient.say(channel,"Jo fuck you self :D", {replyTo: sender.id});
         return true;
     }
 
