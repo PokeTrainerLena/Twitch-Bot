@@ -3,6 +3,8 @@ import { ChatClient } from "twitch-chat-client";
 import { ApiClient } from "twitch";
 import { CommandManager } from "./api/commands/command_manager";
 import { SocialCommand } from "./commands/social_command";
+import crypto from "crypto";
+import { EnvPortAdapter, EventSubListener } from "twitch-eventsub";
 
 
 // Lucario <3
@@ -14,12 +16,17 @@ export class TwitchBot {
 
     // Manager
     private commandManger: CommandManager;
+    private listener: EventSubListener;
 
     constructor(authProvider: AuthProvider) {
 
         this.authProvider = authProvider;
         this.apiClient = new ApiClient({ authProvider });
         this.chatClient = new ChatClient(authProvider, { channels: ['kleines_lucario'] });
+        this.listener = new EventSubListener(this.apiClient, new EnvPortAdapter({
+            hostName: 'kleineslucario.herokuapp.com'
+        }), crypto.randomBytes(20).toString('hex'));
+        
 
         this.commandManger = new CommandManager(this.chatClient, this.apiClient);
     }
@@ -30,6 +37,7 @@ export class TwitchBot {
 
     public async start() {
         await this.chatClient.connect()
+        this.listener.listen();
     }
 
 }
