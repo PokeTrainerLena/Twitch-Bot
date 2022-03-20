@@ -1,0 +1,27 @@
+{
+  "name": "twitch-bot",
+  "version": "1.0.0",
+  "description": "A simple bot for my stream",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PokeTrainerLena/Twitch-Bot.git"
+  },
+  "keywords": [
+    "twitch",
+    "bot"
+  ],
+  "author": "PokeTrainerLena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PokeTrainerLena/Twitch-Bot/issues"
+  },
+  "homepage": "https://github.com/PokeTrainerLena/Twitch-Bot#readme",
+  "dependencies": {
+    "typescript": "^4.6.2"
+  }
+}
