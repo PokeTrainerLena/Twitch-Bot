@@ -5,6 +5,8 @@ import { CommandManager } from "./api/commands/command_manager";
 import { SocialCommand } from "./commands/social_command";
 import crypto from "crypto";
 import { EnvPortAdapter, EventSubListener } from "twitch-eventsub";
+import { EventManager } from "./api/listener/listener_manager";
+import { FollowListener } from "./listeners/follwers/follow_listener";
 
 
 // Lucario <3
@@ -16,6 +18,7 @@ export class TwitchBot {
 
     // Manager
     private commandManger: CommandManager;
+    private eventManager: EventManager;
     private listener: EventSubListener;
 
     constructor(authProvider: AuthProvider, eventAuth: AuthProvider) {
@@ -31,18 +34,20 @@ export class TwitchBot {
         
 
         this.commandManger = new CommandManager(this.chatClient, this.apiClient);
+        this.eventManager = new EventManager();
     }
 
     public registerCommands() {
         this.commandManger.add(new SocialCommand());
     }
+    public registerEvents() {
+        this.eventManager.register(new FollowListener());
+    }
 
     public async start() {
         await this.chatClient.connect()
         const id = await this.apiClient.helix.users.getUserByName("kleines_lucario");
-        this.listener.subscribeToChannelFollowEvents(id?.id!, (e) => {
-            console.log("%d - %s", e.followDate,e.userName)
-        });
+        this.eventManager.start(this.listener, id!, this.apiClient, this.chatClient);
         this.listener.listen();
     }
 
