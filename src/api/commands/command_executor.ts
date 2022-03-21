@@ -24,6 +24,20 @@ export abstract class CommandExecutor implements Command {
     get description(): string {
         return this._description;
     }
+
+    sendMessage(chatClient: ChatClient, channel: string, message: string, reply_id?: string) {
+        if (!reply_id) {//!reply_id   typeof reply_id =='undefined'
+            chatClient.say(channel, message);
+        } else {
+            chatClient.say(channel, message,{ replyTo: reply_id });
+        }
+        
+      }
+      
+
+
+
+    //end of class CommandExecutor
 }
 
 export interface Command {

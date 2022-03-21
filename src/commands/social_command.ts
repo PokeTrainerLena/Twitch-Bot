@@ -40,8 +40,8 @@ export class SocialCommand extends CommandExecutor {
                 break;
         }
 
-        chatClient.say(channel, nachricht[0], { replyTo: sender.id });
-        sender.userInfo.userType
+        this.sendMessage(chatClient,channel,nachricht[0],sender.id)
+        //chatClient.say(channel, nachricht[0], { replyTo: sender.id });
         return true;
     }
 
