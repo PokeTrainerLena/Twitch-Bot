@@ -1,4 +1,4 @@
-import { ChatClient, ChatUser, PrivateMessage } from "twitch-chat-client";
+import { ChatClient, ChatUser, PrivateMessage } from 'twitch-chat-client';
 import { ApiClient } from "twitch";
 
 
