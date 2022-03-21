@@ -34,9 +34,23 @@ export abstract class CommandExecutor implements Command {
         
       }
       
+      sendMessageDelay(chatClient: ChatClient, channel: string, message: string,  delay?: number,reply_id?: string) {
+          if (!delay) {
+            this.getRandomDelay(message.length)
+          }
+        var that = this;
+        setTimeout(function () {
+          that.sendMessage(chatClient,channel,message,reply_id)
+        }, delay);
+      }
 
-
-
+      getRandomDelay(zahl: number) {
+        const max = 13000; //in millisekunden
+        const empf = -0.01;
+        const val = Math.round(max - max * Math.exp(empf * (zahl ^ 2))) + 2000;
+        console.log(val);
+        return val;
+      }
     //end of class CommandExecutor
 }
 
