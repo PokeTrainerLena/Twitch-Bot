@@ -56,7 +56,9 @@ export abstract class CommandExecutor implements Command {
 
         };
         if (randomDelay) {
+            
             delay = delay = this.getRandomDelay(message.length);
+            console.log(delay);
             setTimeout(exe, delay);
         } else if (!delay) {
             setTimeout(exe, delay);
