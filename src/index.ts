@@ -28,6 +28,7 @@ async function main() {
     const bot = new TwitchBot(auth, eventAuth);
     await bot.start();
     bot.registerCommands();
+    bot.registerEvents();
     
 }
 
