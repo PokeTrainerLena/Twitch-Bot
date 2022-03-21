@@ -1,6 +1,6 @@
 
 import { ApiClient } from "@twurple/api";
-import { ChatClient,PrivateMessage } from '@twurple/chat';
+import { ChatClient, PrivateMessage } from '@twurple/chat';
 export abstract class CommandExecutor implements Command {
     private _name: string;
     private _alias: string[];
@@ -9,7 +9,7 @@ export abstract class CommandExecutor implements Command {
         this._name = name;
         this._alias = alias;
     }
-    abstract execute(command: string, channel: string ,msg: PrivateMessage,apiClient: ApiClient, chatClient: ChatClient, args: string[]): boolean;
+    abstract execute(command: string, channel: string, msg: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): boolean;
 
 
     get name(): string {
@@ -18,7 +18,7 @@ export abstract class CommandExecutor implements Command {
 
     get alias(): string[] {
         return this._alias;
-    }   
+    }
 }
 
 export interface Command {

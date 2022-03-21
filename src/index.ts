@@ -21,7 +21,7 @@ async function main() {
     await bot.start();
     bot.registerCommands();
     bot.registerEvents();
-    
+
 }
 
 main();
