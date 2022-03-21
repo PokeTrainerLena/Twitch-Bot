@@ -40,7 +40,7 @@ export class SocialCommand extends CommandExecutor {
                 break;
         }
 
-        this.sendMessageDelay(chatClient,channel,nachricht[0],undefined,sender.id)
+        this.sendMessageDelay(chatClient,channel,nachricht[0],{reply_id: sender.id})
         //chatClient.say(channel, nachricht[0], { replyTo: sender.id });
         return true;
     }
