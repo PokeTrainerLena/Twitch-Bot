@@ -15,11 +15,12 @@ export class EventManager {
             this.events.get(listener.type())?.push(listener);
         }
     }
-    public start(listener: EventSubListener, user: HelixUser, apiClient: ApiClient, chatClient: ChatClient): void {
-        listener.subscribeToChannelFollowEvents(user.id!, (e) => { // subscribeToChannelFollowEvents anpassen!!!
+    public async start(listener: EventSubListener, user: HelixUser, apiClient: ApiClient, chatClient: ChatClient) {
+        await listener.subscribeToChannelFollowEvents(user.id!, (e) => { // subscribeToChannelFollowEvents anpassen!!!
             this.events.get(EventSubChannelFollowEvent.name)?.forEach(ev => { // EventSubChannelFollowEvent anpassen!!!!
                 ev.on(e, apiClient, chatClient);
             });
+            console.log("test");
         });
         // Die Logik bleibt gleich
     }

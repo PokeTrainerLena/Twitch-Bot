@@ -42,9 +42,9 @@ export class SocialCommand extends CommandExecutor {
                 break;
         }
 
-        this.sendMessage(chatClient,channel,nachricht[0],{reply_id: sender.id})
+        this.sendMessage(chatClient,channel,nachricht,{reply_id: sender.id})
         //chatClient.say(channel, nachricht[0], { replyTo: sender.id });
-        return {status: true, exception: 'ABC'};
+        return {status: true};
     }
 
 }
