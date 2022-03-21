@@ -17,8 +17,8 @@ export class BdayCommand extends CommandExecutor {
 
     execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
         args[0]=args[0].replace("@","");
-        var replacment:Replacment={key:"%NAME%",value:args[0]};
-        this.sendMessage(chatClient,channel,bday,{replacment:[replacment]})
+        //var replacment:Replacment={key:"%NAME%",value:args[0]}; ,{replacment:[replacment]}
+        this.sendMessage(chatClient,channel,bday,{})
         return {status: true};
     }
 
