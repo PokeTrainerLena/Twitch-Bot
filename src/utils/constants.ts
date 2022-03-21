@@ -5,3 +5,4 @@ export const SENSITY_DELAY = -0.01;
 export const MIN_DELAY = 2000; //in millisekunden 
 
 export type Dict = { [key: string]: string[]};
+export type Nicknames = { name: string[]};

@@ -1,11 +1,10 @@
 import { nicknames } from "../../messages/nicknames.json";
 import { ApiClient } from "@twurple/api";
 import { ChatClient, ChatUser, PrivateMessage } from '@twurple/chat';
-import { BIRTH_DAY, Dict, MAX_DELAY, MIN_DELAY, SENSITY_DELAY } from "../../utils/constants";
-import { timeStamp } from "console";
+import { BIRTH_DAY, Dict, MAX_DELAY, MIN_DELAY, Nicknames, SENSITY_DELAY } from "../../utils/constants";
 
-
-type messageRply = {delay?: number, reply_id?: string};
+export type Replacment = {key: string, value: string};
+export type OptionalHeaders = {delay?: number, reply_id?: string, randomDelay?: boolean, replacment?: Replacment[]};
 export type CommandResult = {status: boolean, exception?: string};
 
 export abstract class CommandExecutor implements Command {
@@ -38,18 +37,33 @@ export abstract class CommandExecutor implements Command {
         return this._hasPermission;
     }
 
-    sendMessage(chatClient: ChatClient, channel: string, message: string, reply_id?: string) {
-        !reply_id ? chatClient.say(channel, message) : chatClient.say(channel, message, { replyTo: reply_id });
-    }
-    
-    sendMessageDelay(chatClient: ChatClient, channel: string, message: string, { delay, reply_id }: messageRply) {
-        if (!delay) {
-            delay = this.getRandomDelay(message.length);
+    sendMessage(chatClient: ChatClient, channel: string, message: string | Array<string>, {delay ,reply_id, randomDelay = true, replacment}: OptionalHeaders) {
+
+        var exe = () => {
+            if (typeof message === "string") {
+                !reply_id ? chatClient.say(channel, message) : chatClient.say(channel, message, { replyTo: reply_id });
+            } else if (Array.isArray(message)) {
+                var finalMessage = message[this.getRandomInt(message.length)] as string;
+                if (!replacment) {
+                    replacment!.forEach(value => {
+                        finalMessage = finalMessage.replace(value.key, value.value);
+                    });
+                    !reply_id ? chatClient.say(channel, finalMessage) : chatClient.say(channel, finalMessage, { replyTo: reply_id });
+                } else {
+                    !reply_id ? chatClient.say(channel, finalMessage) : chatClient.say(channel, finalMessage, { replyTo: reply_id });
+                }
+            }
+            
+        };
+        if (randomDelay) {
+            delay = delay = this.getRandomDelay(message.length);
+            setTimeout(exe, delay);
+        } else if(!delay) {
+            setTimeout(exe, delay);
+        } else {
+            exe();
         }
-        var that = this;
-        setTimeout(function () {
-            that.sendMessage(chatClient, channel, message, reply_id);
-        }, delay);
+        
     }
 
     getRandomDelay(zahl: number): number {
@@ -69,8 +83,6 @@ export abstract class CommandExecutor implements Command {
         var nameObject = nicknames as Dict;
         return nameObject[username][this.getRandomInt(nameObject[username].length - 1)] ?? username;
     }
-
-
     //end of class CommandExecutor
 }
 
