@@ -12,9 +12,11 @@ export class FollowListener implements Listener<EventSubChannelFollowEvent> {
         return EventSubChannelFollowEvent.name;
     };
 
-    async on(event: EventSubChannelFollowEvent, apiClient: ApiClient, chatClient: ChatClient) {
-        const r = await event.getBroadcaster();
-        await chatClient.say(r.name, "Danke für dein follow @" + event.userDisplayName);
+    on(event: EventSubChannelFollowEvent, apiClient: ApiClient, chatClient: ChatClient):void {
+        event.getBroadcaster().then(r => {
+            chatClient.say(r.name, "Danke für dein follow @" + event.userDisplayName).then();
+        })
+        
 
     }
 }
