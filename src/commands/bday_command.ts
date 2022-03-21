@@ -1,4 +1,4 @@
-import { ApiClient } from "@twurple/api";
+/*import { ApiClient } from "@twurple/api";
 import { ChatClient, ChatUser, PrivateMessage } from '@twurple/chat';
 import { CommandExecutor, CommandResult } from "../api/commands/command_executor";
 import { bday } from "../messages/Nachrichten.json";
@@ -19,4 +19,4 @@ export class SocialCommand extends CommandExecutor {
         return {status: true};
     }
 
-}
+}*/

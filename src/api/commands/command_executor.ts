@@ -3,22 +3,22 @@ import { ApiClient } from "@twurple/api";
 import { ChatClient, ChatUser, PrivateMessage } from '@twurple/chat';
 import { BIRTH_DAY, Dict, MAX_DELAY, MIN_DELAY, Nicknames, SENSITY_DELAY } from "../../utils/constants";
 
-export type Replacment = {key: string, value: string};
-export type OptionalHeaders = {delay?: number, reply_id?: string, randomDelay?: boolean, replacment?: Replacment[]};
-export type CommandResult = {status: boolean, exception?: string};
+export type Replacment = { key: string, value: string };
+export type OptionalHeaders = { delay?: number, reply_id?: string, randomDelay?: boolean, replacment?: Replacment[] };
+export type CommandResult = { status: boolean, exception?: string };
 
 export abstract class CommandExecutor implements Command {
     private _name: string;
     private _alias: string[];
     private _description: string;
-    private _hasPermission:(user: ChatUser) => boolean;
+    private _hasPermission: (user: ChatUser) => boolean;
 
-    constructor(name: string, alias: string[], description: string, hasPermission:(user: ChatUser) => boolean) {
+    constructor(name: string, alias: string[], description: string, hasPermission: (user: ChatUser) => boolean) {
         this._name = name;
         this._alias = alias;
         this._description = description;
         this._hasPermission = hasPermission;
-      //  this._nicknames=nicknames
+        //  this._nicknames=nicknames
     }
     abstract execute(command: string, channel: string, msg: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult;
 
@@ -37,14 +37,14 @@ export abstract class CommandExecutor implements Command {
         return this._hasPermission;
     }
 
-    sendMessage(chatClient: ChatClient, channel: string, message: string | Array<string>, {delay ,reply_id, randomDelay = true, replacment}: OptionalHeaders) {
+    sendMessage(chatClient: ChatClient, channel: string, message: string | Array<string>, { delay, reply_id, randomDelay = true, replacment }: OptionalHeaders) {
 
         var exe = () => {
             if (typeof message === "string") {
                 !reply_id ? chatClient.say(channel, message) : chatClient.say(channel, message, { replyTo: reply_id });
             } else if (Array.isArray(message)) {
                 var finalMessage = message[this.getRandomInt(message.length)] as string;
-                if (!replacment) {
+                if (!(replacment == undefined)) {
                     replacment!.forEach(value => {
                         finalMessage = finalMessage.replace(value.key, value.value);
                     });
@@ -53,17 +53,17 @@ export abstract class CommandExecutor implements Command {
                     !reply_id ? chatClient.say(channel, finalMessage) : chatClient.say(channel, finalMessage, { replyTo: reply_id });
                 }
             }
-            
+
         };
         if (randomDelay) {
             delay = delay = this.getRandomDelay(message.length);
             setTimeout(exe, delay);
-        } else if(!delay) {
+        } else if (!delay) {
             setTimeout(exe, delay);
         } else {
             exe();
         }
-        
+
     }
 
     getRandomDelay(zahl: number): number {
