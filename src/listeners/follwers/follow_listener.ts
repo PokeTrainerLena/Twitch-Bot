@@ -2,7 +2,6 @@ import { ChatClient } from "twitch-chat-client";
 import { EventSubChannelFollowEvent } from "twitch-eventsub/lib/Events/EventSubChannelFollowEvent";
 import { ApiClient } from "twitch";
 import { Listener } from "../../api/listener/listener_manager";
-import e from "express";
 
 
 export class FollowListener implements Listener<EventSubChannelFollowEvent> {
