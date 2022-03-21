@@ -1,22 +1,25 @@
-/*import { ApiClient } from "@twurple/api";
+import { ApiClient } from "@twurple/api";
 import { ChatClient, ChatUser, PrivateMessage } from '@twurple/chat';
-import { CommandExecutor, CommandResult } from "../api/commands/command_executor";
+import { userInfo } from "os";
+import { CommandExecutor, CommandResult, Replacment } from "../api/commands/command_executor";
 import { bday } from "../messages/Nachrichten.json";
 
-export class SocialCommand extends CommandExecutor {
+
+export class BdayCommand extends CommandExecutor {
 
     constructor() {
-        super("dc", 
-        ['discord', 'dc', 'donate', 'tip', 'doni', 'spende', 'freundescode', 'fc', 'mitspielen', 'instagram', 'ig', 'insta', 'youtube', 'yt'],
-         "Damit gebe ich dir einen social-Link von Leni zurück",(u) => true);
+        super("bday", 
+        ['bday'],
+         "Damit gebe ich dir einen social-Link von Leni zurück",(user) => {
+            return user.isMod;
+        });
     }
 
     execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
-        
-
-        this.sendMessage(chatClient,channel,bday,{reply_id: sender.id})
-        //chatClient.say(channel, nachricht[0], { replyTo: sender.id });
+        args[0]=args[0].replace("@","");
+        var replacment:Replacment={key:"%NAME%",value:args[0]};
+        this.sendMessage(chatClient,channel,bday,{replacment:[replacment]})
         return {status: true};
     }
 
-}*/
+}

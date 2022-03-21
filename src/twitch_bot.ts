@@ -8,6 +8,7 @@ import { ApiClient } from "@twurple/api";
 import { AuthProvider } from "@twurple/auth";
 import { EventSubListener, EnvPortAdapter } from "@twurple/eventsub";
 import { ChatClient } from '@twurple/chat';
+import { BdayCommand } from "./commands/bday_command";
 
 
 // Lucario <3
@@ -47,6 +48,7 @@ export class TwitchBot {
 
     public registerCommands() {
         this.commandManger.add(new SocialCommand());
+        this.commandManger.add(new BdayCommand());
     }
     public registerEvents() {
         this.eventManager.register(new FollowListener());
