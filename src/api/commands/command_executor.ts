@@ -35,7 +35,7 @@ export abstract class CommandExecutor implements Command {
       }
       
       sendMessageDelay(chatClient: ChatClient, channel: string, message: string,  delay?: number,reply_id?: string) {
-          if (!delay) {
+          if (typeof delay =='undefined') {
             this.getRandomDelay(message.length)
           }
         var that = this;
