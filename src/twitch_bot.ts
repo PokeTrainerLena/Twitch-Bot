@@ -33,7 +33,7 @@ export class TwitchBot {
                 hostName: 'kleineslucario.herokuapp.com'
             }
             ),
-            secret: crypto.randomBytes(20).toString('hex')
+            secret: process.env.secret!
         });
 
 
@@ -51,7 +51,7 @@ export class TwitchBot {
 
     public async start() {
         await this.chatClient.connect()
-        const id = await this.apiClient.helix.users.getUserByName("kleines_lucario");
+        const id = await this.apiClient.users.getUserByName("kleines_lucario");
         this.eventManager.start(this.listener, id!, this.apiClient, this.chatClient);
         this.listener.listen();
     }
