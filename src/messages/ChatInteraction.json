@@ -1,0 +1,282 @@
+{
+    "ChatInteraction": {
+        "explode": {
+            "standard": {
+                "noTarget": [
+                    "Uh da fliegen aber die Fetzen... Bitte kein Blut auf mein Fell verschmieren!",
+                    "@%NAME%, du wolltest aber nicht dich selbst explodieren lassen oder O.o Falls ja: NEEEEEIIIIN, ich hab dich doch lieb und Lena auch poketr9KyuSad "
+                ],
+                "Target": [
+                    "Oho, @%NAME2%, was hast du @%NAME% angetan?",
+                    "Hey, @%NAME%, sei lieb zu @%NAME2%! Sonst bekommst du es mit mir zu tun poketr9RAGE ",
+                    "@%NAME2% Haha! poketr9LOL "
+                ],
+                "self": [
+                    "%NAME% nutzte Selbstzerstörung. Es ist sehr efffektiv. %NAME% ist K.O. poketr9Ko"
+                ]
+            },
+            "SenderIndividuell": {
+                "namen": [
+                    "krispl1999"
+                ],
+                "krispl1999": {
+                    "Target": [
+                        "Ah ja, Lukas sorgt wieder für ärger... hat jmd etwas anders erwartet? poketr9LOL ",
+                        "Ui, Lukas ärgert heute %NAME% und nicht meinen Trainer! Find ich gut!"
+                    ],
+                    "noTarget": [
+                        "Ah ja, Lukas sorgt wieder für ärger... hat jmd etwas anders erwartet? poketr9LOL ",
+                        "Ui, Lukas ärgert heute %NAME% und nicht meinen Trainer! Find ich gut!"
+                    ]
+                }
+            },
+            "TargetIndividuell": {
+                "namen": [
+                    "poketrainer_lena"
+                ],
+                "poketrainer_lena": {
+                    "standard": [
+                        "Hey, was hat dir mein Trainer angetan?! Sei lieb, sonst bekommst du meine Aurasphäre zu spüren! poketr9RAGE"
+                    ],
+                    "namen": [
+                        "krispl1999"
+                    ],
+                    "krispl1999": [
+                        "Aw <3 Lukas ärgert Lenchen... manche Dinge ändern sich wohl nie <3"
+                    ]
+                },
+                "bot": {
+                    "standard": [
+                        "/me weint :cry:",
+                        "Hey, @%NAME%, was hab ich dir getan?! poketr9RAGE"
+                    ],
+                    "namen": [
+                        "poketrainer_lena"
+                    ],
+                    "poketrainer_lena": [
+                        "Verraten vom eigenen Trainer :cry:"
+                    ]
+                }
+            }
+        },
+        "flirt": {
+            "standard": {
+                "noTarget": [
+                    "<3 Uiui, %NAME% ...Das ging aber nicht an mich oder? <3",
+                    "<3 Ohoho, und an wen war das gerichtet @%NAME%? <3",
+                    "<3 Oh, wird es langsam heiß hier drin ;) <3 "
+                ],
+                "Target": [
+                    "<3 Uiui, @%NAME% ...soll ich dir und @%NAME2% ein Zimmer besorgen? <3",
+                    "<3 @%NAME% und @%NAME2% schauen sich tief in die Augen... <3 "
+                ],
+                "self": [
+                    "@%NAME% Sag mal kennst du die Geschichte von Narziss? Hast dich in dein eigenes Spiegelbild verliebt?"
+                ]
+            },
+            "SenderIndividuell": {
+                "namen": [
+                    "poketrainer_lena"
+                ],
+                "poketrainer_lena": {
+                    "Target": [
+                        "Was?! Mein Trainer flirtet mit dir, @%NAME2%?! Muss ich eifersüchtig werden?"
+                    ],
+                    "noTarget": [
+                        "Naw, Lenchen <3 Das ging doch an mich oder? O.o"
+                    ]
+                }
+            },
+            "TargetIndividuell": {
+                "namen": [
+                    "poketrainer_lena"
+                ],
+                "poketrainer_lena": {
+                    "standard": [
+                        "Hey, @%NAME%, das ist mein Trainer, ja?!"
+                    ],
+                    "namen": [
+                        "blayder100"
+                    ],
+                    "blayder100": [
+                        "Oki, dir lasse ich das nochmal durchgehen...",
+                        "#LAYDER <3 <3 <3"
+                    ]
+                },
+                "bot": {
+                    "standard": [
+                        ":flushed:",
+                        "Ähm... Danke? ",
+                        "CuteDog "
+                    ],
+                    "namen": [""]
+                }
+            }
+        },
+        "kiss": {
+            "standard": {
+                "noTarget": [
+                    "/me @%NAME% verteilt ganz viele Luftküsschen <3 An wen die wohl gerichtet sind?",
+                    "/me @%NAME% spitzt die Lippen, doch niemand ist da niemand zum schmatzen"
+                ],
+                "Target": [
+                    "<3 @%NAME% drückt @%NAME2% einen kleinen Bussi auf die Wange <3 ",
+                    "<3 @%NAME% drückt @%NAME2% einen dicken Schmatzer auf die Stirn <3 ",
+                    "lickR lickL "
+                ],
+                "self": [
+                    "@%NAME% Sag mal wie kann man sich selbst küssen? O.o"
+                ]
+            },
+            "SenderIndividuell": {
+                "namen": [
+                    "poketrainer_lena"
+                ],
+                "poketrainer_lena": {
+                    "Target": [
+                        "Was?! Mein Trainer gibt @%NAME2% einen Schmatzer?! Muss ich eifersüchtig werden?"
+                    ],
+                    "noTarget": [
+                        "Naw, Lenchen <3 Das ging doch an mich oder? O.o"
+                    ]
+                }
+            },
+            "TargetIndividuell": {
+                "namen": [
+                    "poketrainer_lena"
+                ],
+                "poketrainer_lena": {
+                    "standard": [
+                        "Hey, @%NAME%, das ist mein Trainer, ja?!"
+                    ],
+                    "namen": [
+                        "blayder100"
+                    ],
+                    "blayder100": [
+                        "Oki, dir lasse ich das nochmal durchgehen...",
+                        "#LAYDER <3 <3 <3"
+                    ]
+                },
+                "bot": {
+                    "standard": [
+                        "@%NAME% Waaaaaaas? Du gibst mir einen Kuss? Womit hab ich das denn verdient poketr9Love",
+                        ":flushed:"
+                    ],
+                    "namen": [""]
+                }
+            }
+        },
+        "hug": {
+            "standard": {
+                "noTarget": [
+                    "/me <3 Aw, @%NAME% schickt ganz viel Liiiiiebe und Umarmugen raus <3 ",
+                    "Ui, der Stream ist ja heute mal wieder kuschelig und du @%NAME% hilfst dabei... Danki dafür <3 "
+                ],
+                "Target": [
+                    "/me <3 Aw, @%NAME% schickt ganz viel Liiiiiebe und eine Umarmug an @%NAME2% <3 ",
+                    "/me <3 Aw, @%NAME% schließt @%NAME2% in die Arme <3 und vielleicht auch ins <3  ",
+                    "Ui eine Umarmung zwischen @%NAME% und @%NAME2% poketr9Love Darf man sich anschließen poketr9Lurk"
+                ],
+                "self": [
+                    "@%NAME% legt seine Arme um sich selbst... Irgendwie traurig oder?"
+                ]
+            },
+            "SenderIndividuell": {
+                "namen": [
+                    "poketrainer_lena"
+                ],
+                "poketrainer_lena": {
+                    "Target": [
+                        "Was?! Mein Trainer umarmt dich, @%NAME2%?! Muss ich eifersüchtig werden?"
+                    ],
+                    "noTarget": [
+                        "Naw, Lenchen <3 Das ging doch an mich oder? O.o"
+                    ]
+                }
+            },
+            "TargetIndividuell": {
+                "namen": [
+                    "poketrainer_lena"
+                ],
+                "poketrainer_lena": {
+                    "standard": [
+                        "Hey, @%NAME%, das ist mein Trainer, ja?!"
+                    ],
+                    "namen": [
+                        "blayder100"
+                    ],
+                    "blayder100": [
+                        "Oki, dir lasse ich das nochmal durchgehen...",
+                        "#LAYDER <3 <3 <3"
+                    ]
+                },
+                "bot": {
+                    "standard": [
+                        "Aw danki @%NAME% für deine Liebe Umarmung <3 Ich fühle mich ganz doll geknuddelt",
+                        "/me blushing",
+                        "Was? Eine Umarmung? Für mich? poketr9Love "
+                    ],
+                    "namen": [""]
+                }
+            }
+        },
+        "loben": {
+            "standard": {
+                "noTarget": [
+                    "Ja fein, ganz fein!",
+            "/me schnurr <3 ",
+            "/me schnurr "
+                ],
+                "Target": [
+                    "Oh ja, @%NAME2%, hast du ganz fein gemacht",
+            "/me @%NAME% tätschelt @%NAME2% den Kopf: pat,pat",
+            "@%NAME%, laut dir hat also @%NAME2% ein Lob verdient? Soso..."
+                ],
+                "self": [
+                    "@%NAME% Selbst lob stinkt",
+                    "@%NAME% musst du dich selbst loben, weil es sonst keiner tut? Vllt bist du ja der einzige, der findet, dass deine Taten lobenswert sind :thinking_face: "
+                ]
+            },
+            "SenderIndividuell": {
+                "namen": [
+                    "poketrainer_lena"
+                ],
+                "poketrainer_lena": {
+                    "Target": [
+                        "Was?! Mein Trainer lobt dich, @%NAME2%?! Muss ich eifersüchtig werden?"
+                    ],
+                    "noTarget": [
+                        "Naw, Lenchen <3 Das ging doch an mich oder? O.o"
+                    ]
+                }
+            },
+            "TargetIndividuell": {
+                "namen": [
+                    "poketrainer_lena"
+                ],
+                "poketrainer_lena": {
+                    "standard": [
+                        "Hey, @%NAME%, das ist mein Trainer, ja?!"
+                    ],
+                    "namen": [
+                        "blayder100"
+                    ],
+                    "blayder100": [
+                        "Oki, dir lasse ich das nochmal durchgehen...",
+                        "#LAYDER <3 <3 <3"
+                    ]
+                },
+                "bot": {
+                    "standard": [
+                        "/me schnurr",
+            "Schau mal Lena! @%NAME% findet, ich habe etwas ganz dolle toll gemacht <3 poketr9Love"
+                    ],
+                    "namen": ["poketrainer_lena"],
+                    "poketrainer_lena": [
+                        "Aw, danki mein Trainer <3"
+                    ]
+                }
+            }
+        }
+    }
+}

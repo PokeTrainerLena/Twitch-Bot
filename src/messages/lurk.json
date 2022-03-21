@@ -1,0 +1,72 @@
+{
+    "lurk": {
+        "keys": [
+            "lurk",
+            "duschlurk",
+            "schlaflurk",
+            "gaminglurk",
+            "esslurk",
+            "kochlurk"
+        ],
+        "lurk": {
+            "ersterLurker": [
+                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen poketr9Lurk",
+                "@%NAME% beobachtet uns absofort schweigend poketr9FINE "
+            ],
+            "mehrereLurker": [
+                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen ;) Momentan sind %ZAHL% Leute im Lurk poketr9Lurk",
+                "@%NAME% beobachtet uns absofort schweigend mit %ZAHL% weiteren Lurkern poketr9FINE "
+            ]
+        },
+        "duschlurk": {
+            "ersterLurker": [
+                "Gute Dusche/ Bad @%NAME%! Wünsche dir viel Entspannung! Und sag mir bescheid, falls du gesellschaft willst :wink: :smirk:",
+                "Gute Dusche/ Bad @%NAME%! Wünsche dir viel Entspannung! <3"
+            ],
+            "mehrereLurker": [
+                "Gute Dusche/ Bad @%NAME%! Wünsche dir viel Entspannung! Und sag mir bescheid, falls du gesellschaft willst :wink: :smirk:",
+                "Gute Dusche/ Bad @%NAME%! Wünsche dir viel Entspannung! <3"
+            ]
+        },
+        "schlaflurk": {
+            "ersterLurker": [
+                "Gute Nacht @%NAME%... Lalelu, nur der Mann im Mond schaut zu - Hat jemand noch genug Poke, um Lena für uns singen zu lassen ? Poketr9Lachen ",
+                "Schlaf gut @%NAME% und danke für deine Unterstützung <3 "
+            ],
+            "mehrereLurker": [
+                "Gute Nacht @%NAME%... Lalelu, nur der Mann im Mond schaut zu - Hat jemand noch genug Poke, um Lena für uns singen zu lassen ? Poketr9Lachen ",
+                "Schlaf gut @%NAME% und danke für deine Unterstützung <3 "
+            ]
+        },
+        "gaminglurk": {
+            "ersterLurker": [
+                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen poketr9Lurk",
+                "@%NAME% beobachtet uns absofort schweigend poketr9FINE "
+            ],
+            "mehrereLurker": [
+                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen ;) Momentan sind %ZAHL% Leute im Lurk poketr9Lurk",
+                "@%NAME% beobachtet uns absofort schweigend mit %ZAHL% weiteren Lurkern poketr9FINE "
+            ]
+        },
+        "esslurk": {
+            "ersterLurker": [
+                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen poketr9Lurk",
+                "@%NAME% beobachtet uns absofort schweigend poketr9FINE "
+            ],
+            "mehrereLurker": [
+                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen ;) Momentan sind %ZAHL% Leute im Lurk poketr9Lurk",
+                "@%NAME% beobachtet uns absofort schweigend mit %ZAHL% weiteren Lurkern poketr9FINE "
+            ]
+        },
+        "kochlurk": {
+            "ersterLurker": [
+                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen poketr9Lurk",
+                "@%NAME% beobachtet uns absofort schweigend poketr9FINE "
+            ],
+            "mehrereLurker": [
+                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen ;) Momentan sind %ZAHL% Leute im Lurk poketr9Lurk",
+                "@%NAME% beobachtet uns absofort schweigend mit %ZAHL% weiteren Lurkern poketr9FINE "
+            ]
+        }
+    }
+}

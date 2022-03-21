@@ -1,0 +1,365 @@
+{
+    "willkommensnachrichten": {
+        "standard": [
+            "Hey, @%NAME%! Schön dich zu sehen! Wie geht es dir?",
+            "Achtung! Ein wildes @%NAME%! Ich glaube es beißt O.O",
+            "Aw <3 Schaut mal ein wildes @%NAME%! Kann ich es streicheln? Bin auch ganz zärtlich <3 ",
+            "@%NAME% Naaaaaaa du? Wie geeeeeeht'S?",
+            "Ich mach heute Party! Machst du heute Party, @%NAME%?",
+            "@%NAME% Hey Cuuuuuuty <3",
+            "Pokeball, LOOoo - Oh, sry, @%NAME%, dachte du wärst ein Pokemon :innocent: ",
+            "Oh hey, @%NAME%. Ehm... Schönes Wetter?",
+            "@%NAME% yo!",
+            "@%NAME% yo! Willkommen im Jo-Institut!",
+            "@%NAME% yo! Willkommen im Lena-Club!"
+        ],
+        "namen": [
+            "blayder100",
+            "lhugion",
+            "Spitzmaus_OO7",
+            "heinz_uwe",
+            "mein__gewissen",
+            "pokemontrainerin",
+            "themeinerlp",
+            "yuli8",
+            "saphira_sama",
+            "im_a_unicorn7o"
+        ],
+        "blayder100": [
+            "Hey, @%NAME%, wie geht es unserem ersten und einzigem Arenaleiter?",
+            "OMG, Emolga ist da! Oh und hi @%NAME%, du bist auch hier..."
+        ],
+        "lhugion": [
+            "Oh, das ist ja ein wildes lhu - LHUGION? Ist Saphira bei dir? poketr9Love ",
+            "Oh hey @%NAME%! Was ich dich schon immer mal fragen wollte: Kommt dein Name von Lugia?",
+            "@%NAME% wenn du der Chef meiner Chefin bist, bist du dann mein Großchef?",
+            "LLLLHHHUUUUUUUUUUUGGGIIIIIIIIIIIIIIIIIIIILEEEIIIINNN"
+        ],
+        "spitzmaus_oo7": [
+            "Hi, Spitzi <3",
+            "Hi, Kollege <3"
+        ],
+        "heinz_uwe": [
+            "Der einzig wahre Heinz! Eure Heilligkeit!",
+            "%NAME%, yo"
+        ],
+        "mein__gewissen": [
+            "Ah ja, mein__gewissen... Normalerweise meide ich die Gespräche mit meinem Gewissen! poketr9FINE "
+        ],
+        "pokemontrainerin": [
+            "Ah! Eine Pokemontrainerin! Bitte fang mich nicht!"
+        ],
+        "themeinerlp": [
+            "@%NAME% Hallo, Herrchen? Dad? Miterschaffer?"
+        ],
+        "yuli8": [
+            "YUUUUUUUUUUUUUULIIIIIIIIIIIIII <3"
+        ],
+        "saphira_sama": [
+            "Oh, hallo verehrte Saphira <3 poketr9Love <3"
+        ],
+        "im_a_unicorn7o": [
+            ":unicorn: da kommt wieder das einhorn :unicorn: "
+        ]
+    },
+    "funfacts": [
+        "Lena hat mich erschaffen und @themeinerlp hat mich hübsch gemacht :) ",
+        "Ich wollte schon längst mal in ein Labyrinth. Es ist wie ein Puzzle, das man mit den Füßen löst - nur leider hab ich keine Füße",
+        "Meine 24 Stunden Schicht geht jeden Moment zu ende. Und zwar genau jetzt. Nun, an die Arbeit.",
+        "Lenas Lieblingskuchen ist Eierlikörkuchen aus dem Supermarkt poketr9LOL Was ist euer?",
+        "Ich habe gelernt, wie man funfacts erzählt in 30min, weil Lena noch nie mit JSON-Datein gearbeitet hat poketr9LOL ",
+        "Ich verbringe zu viel Zeit im Internet...",
+        "Ich mag lange Spaziergänge am Strand :)",
+        "Achtung! Ein Fakt, den keiner von euch weiß: Lena liebt Schoki",
+        "@Blayder100 hat einen Hamster!",
+        "@Blayder100 ist unser Elektroarenaleiter und hat nur Nager in seinem Team",
+        "@krispl1999 war Lenas erster Chatter und erster Mod - Danke krispl1999",
+        "@Dau84 programmiert ganz tolle Spiele, die man im TwitchChat spielen kann <3 ",
+        "@Lhugion hat ein sehr süßes Mimikyu <3 ",
+        "@Lhugion hat auch jemanden meiner Sorte - Die wunderbare Saphira poketr9Love ",
+        "@themeinerlp ist ganz supi im programmieren - Er hat Lena geholfen mein Gehirn aufzuräumen :) ",
+        "Es gibt eine Schokolade, die 'die gute Schokolade' heißt und der fun in dem fact ist: Sie ist die beste Schokolade",
+        "Ich verpasse Nackenschellen, wenn jemand nicht nett ist, also immer nett sein!",
+        "Lena hat @Heinz_Uwe adoptiert",
+        "Lena studiert Computer Engineering (dt. technische Informatik)",
+        "Nö",
+        "Ist Lena so langweilig, dass ich aushelfen muss?",
+        "Lena mag keine Glückskekse",
+        "Gengar ist der Schatten eines Pixis",
+        "Das erste Pokemon, was je designt wurde, ist Rizeros",
+        "Das erste Pokemon in der Pokemongeschichte ist Arkeus (ja nicht Mew)",
+        "Das erste Pokemon ist Bisasam... im PokeDex natürlich",
+        "Mein Karpador hab ich in einer Statue in einer Arena in Pokemon Rot gefangen :no_mouth: ",
+        "Die Inspiration für das Pokemon Tangela war Medusa",
+        "Lena hat das große Latinum - kann aber kaum einen Satz übersetzen poketr9Trash",
+        "Das weiß niemand: Lenas Lieblingspokemon ist Lucario",
+        "Das ist kein Fun Fact, sondern eine Frage die ich an euch habe: Im PokeAnime wird ja fleisch gegessen... Welche Pokemon sind das und welche würdet ihr gerne essen? Ich habe dafür leider weder Magen noch Mund :no_mouth: ",
+        "Hätte Ich einen Wunsch, würde ich alle Krankheiten wegmachen... Und sie durch schlimmere Ersetzen! Oh und machen das Elfo alleine stirbt!",
+        "Ich habe einen Crush auf die KI aus Inside Job poketr9Love ...wir haben den selben Traum",
+        "Lenas erste PokeRegion war Sinnoh und das erste Spiel war Perl ",
+        "I wasn’t looking for a silver lining but - Hm, was? Sry hab nicht zugehört poketr9Ko Höre Stela Cole - Goldrush poketr9Love ",
+        "@Meerderar ist nicht Jungfrau - ich rede von Sternzeichen natürlich! Hast du etwa was anders erwartet? poketr9LOL",
+        "Chappie ist mein Lieblingsfilm poketr9Love ",
+        "Wadribie hat zwei Augen und einen stattlichen Bart!",
+        "An alle nicht Mods, schreibt mal system_probe in den Chat ;) ",
+        "Zauberstab heißt auf französisch baguette magique",
+        "Eine Giraffe hat genause viele Halswirbel wie ein Mensch"
+    ],
+    "bday": [
+        "Alles gute zum Geburtstag @%NAME%! Wünsche dir alle Shinys und Schoki der Welt! Nachdem Lena sich ihren Lebensvorrat geklaut hat poketr9LOL ",
+        "Fröhlichen Tortentag @%NAME%! Welche Torte hast du heute und noch viel wichtiger: Bekomme ich etwas ab? poketr9Lurk poketr9Love"
+    ],
+    "fail": {
+        "eins": [
+            "Ups, Lenas erster Fail heute poketr9Ko ",
+            "Hoppla, Lena, da musst du aber in Zukunft besser aufpassen poketr9Trash... aber einer geht ja noch"
+        ],
+        "zwei": [
+            "%ZAHL% Fails, das ist immernoch ein Sieg ! poketr9LOL "
+        ],
+        "drei": [
+            "%ZAHL% Fails... Ähm, das ist alles eure Schuld! Hört auf Lena abzulenken! poketr9RAGE ",
+            "Lena, wir sind gerade bei %ZAHL% Fails... Konzentration! poketr9FINE "
+        ],
+        "vier": [
+            "%ZAHL% Fails... Langsam gehen ihr die Ausreden aus, oder? poketr9FINE "
+        ],
+        "fünf": [
+            "Was? Wie konnte Lena %ZAHL%-Mal failen?! Ich glaube, wir brauchen nen Erwachsenen, der übernimmt poketr9Trash  poketr9Ko ",
+            "Ich weiß langsam nicht mehr, was ich dazu sagen soll poketr9FINE %ZAHL% Fails..."
+        ]
+    },
+    "modloben": [
+        "Jupp, wir Mods sind einfach Toll! Danke, @%NAME%, dass du es auch erkannt hast <3 ",
+        "/me schnurr <3 ",
+        "/me schnurr "
+    ],
+    "pause": [
+        {
+            "eins": [
+                "bb, Lena",
+                "Tschüüüüüssi Lenchen"
+            ],
+            "zwei": [
+                "Jetzt, da Sie weg ist, können wir endlich lästern! Also diese Lena, ne? Das ist ne richtige Lena!",
+                "Sie braucht ja mal wieder lange... poketr9Trash poketr9FINE ",
+                "Ich vermisse sie schon poketr9KyuSad "
+            ]
+        }
+    ],
+    "so": [
+        "Hey, ihr Liebe! Schaut doch mal bei @%NAME% vorbei! Hier ist der Link: https://www.twitch.tv/%NAME% ",
+        "Ich habe ganz viel gutes von @%NAME% gehört, also schaut doch mal vorbei und schickt etwas Liiiiiiebe <3 https://www.twitch.tv/%NAME% "
+    ],
+    "stop": [
+        "Hey, Lena ist wieder da <3 ",
+        "Was jetzt schon? Och mennö..."
+    ],
+    "version": [
+        "@%NAME% Ich bin Version 4.10.3 und %ZAHL% Tage jung :) "
+    ],
+    "block": [
+        {
+            "eins": [
+                "Hey, @%NAME%!  Nett sein! poketr9RAGE Dieses Mal sehe ich noch dadrüber hinweg...",
+                "@%NAME% Du verstößt gerade gegen die Kanalregeln und deshalb musste ich deine Nachricht löschen..."
+            ],
+            "zwei": [
+                "Hey, @%NAME%! Nett sein! Ich muss dir dafür ein TimeOut von %ZAHL% geben poketr9RAGE",
+                "@%NAME% Du verstößt gerade gegen die Kanalregeln und deshalb musste ich deine Nachricht löschen und dir ein TimeOut von %ZAHL% geben..."
+            ]
+        }
+    ],
+    "channelRewards": {
+        "c879414b-bbe3-4a6d-b6f1-65d5d4e47d97": {
+            "name": "Kuschelzeit",
+            "messages": [
+                "Oh hier wird aber wieder geschmust <3 Darf ich mit machen? poketr9Love ",
+                "Warum wird wieder nur %NAME2% geschmußt, aber ich nicht poketr9KyuSad "
+            ]
+        },
+        "0f9835b8-f890-4ae6-9593-76165506d18d": {
+            "name": "Trinken, Lena!",
+            "messages": [
+                "Sehr gut, @%NAME%, Lena vergisst das viel zu oft und fragt sich dann, warum sie Halsschmerzen hat poketr9Trash"
+            ]
+        },
+        "803731c2-f121-4f1f-b085-2efb9004e024": {
+            "name": "Dein armer Rücken!",
+            "messages": [
+                "Gut mitgedacht, @%NAME%, die sitzt schon wieder so krum, die Hexe! poketr9LOL ",
+                "Lena, sitz endlich mal gerade! poketr9RAGE "
+            ]
+        },
+        "82df5999-859c-4d16-b6ac-e13630228858": {
+            "name": "Ich nenne dich ...!",
+            "messages": [
+                "%NAME2%... Schöner Name @%NAME%"
+            ]
+        },
+        "0377dd8f-c17b-4024-8702-b5e6abe5b4b6": {
+            "name": "Pick it up!",
+            "messages": [
+                "Yeah! Schoki ist immer gut <3 "
+            ]
+        },
+        "718c78cf-fde6-49db-b366-0521635c2935": {
+            "name": "Beweg dich, Fauli!",
+            "messages": [
+                "Oh sehr gut, @%NAME%, die Faulesocke muss definitiv mehr Sport machen!"
+            ]
+        },
+        "7f0800b9-0f85-4bb4-adf2-f1ac23a8500a": {
+            "name": "Ähm, leute...?",
+            "messages": [
+                "Ich weiß schon, was ich antworten werde poketr9Lachen - Wenn ich doch nur könnte poketr9FINE ",
+                "Ich weiß schon, was ich antworten werde poketr9Lachen ",
+                "Ich hoffe, es gibt wieder Salami als Antwortmöglichkeit poketr9LOL "
+            ]
+        },
+        "f0ac1d07-5680-421e-817f-20b36fec8a96": {
+            "name": "Zieh dich an",
+            "messages": [
+                "Ui ui sieh an Lena zieht sich an!"
+            ]
+        },
+        "056aa78e-bc99-4510-906b-ee4962384218": {
+            "name": "Auf nach...!",
+            "messages": [
+                "Oh, wie plannen einen Überfall auf %NAME2%? Haben alle ihre Tastaturen gezückt?",
+                "@%NAME% schaut also %NAME2%... Soso"
+            ]
+        },
+        "2bd453a5-4674-4bfe-8e5e-3a9c126c1ed1": {
+            "name": "Rückwärts, rückwärts (5min)",
+            "messages": [
+                "Viiiiel Spaß, Lena Poketr9Lachen "
+            ]
+        },
+        "4516c9ab-a890-45bb-a5cf-cfd0323faf2f": {
+            "name": "Zeig uns deine ScHöNe Stimme (3min)",
+            "messages": [
+                "Ach du Heilige! Schnell Stream muten! poketr9FINE ",
+                "@%NAME%, was haben wir dir eigentlich getan? poketr9RAGE "
+            ]
+        },
+        "d4654b0c-8a33-458b-95db-2c168406554f": {
+            "name": "Lass das! (5min)",
+            "messages": [
+                "Ich liebe es, wenn wir Lena Steine in den Weg legen poketr9LOL "
+            ]
+        },
+        "b4f3ace8-3043-4b6a-a3bf-683a2c6312d4": {
+            "name": "Trink Peter, Lena ;)",
+            "messages": [
+                "Und da holt Lena wieder ihren Peter aus...",
+                "ZIEH! ZIEH! ZIEH!"
+            ]
+        },
+        "7f93e6dc-31e1-40eb-b112-bee18953d728": {
+            "name": "PSHT! (3min)",
+            "messages": [
+                "Hach... diese Stille <3 Danke, @%NAME%",
+                "Ui jetzt Lena ärgern: Lena sag mal stimmt es, dass Milka die leckerste Schoki ist? poketr9LOL "
+            ]
+        },
+        "7d747868-c73f-4fe0-a228-5a0e3440baf3": {
+            "name": "Ohren für alle!",
+            "messages": [
+                "OMG ich hätte nie gedacht, dass irgendwer so viele Punkte sammelt O.o"
+            ]
+        },
+        "24ddd3bb-5b1d-44f7-b0c6-89f7fdbcb1ea": {
+            "name": "Happy Bday",
+            "messages": [
+                "Oh, von mir auch alles gute! <3 ",
+                "Ach was, das ist heute? poketr9LOL ",
+                "Habi Birfdai tuuu juuuuu, Habi Birfdai, liebe Lena, Habi Birfdai tuuu juuuuu"
+            ]
+        }
+    },
+    "cheer": [
+        "Danke, @%NAME%, für den Cheer <3 "
+    ],
+    "host": [
+        {
+            "eins": [
+                "Ui, ein Host von @%NAME%! Dankeschön und auch Dank an die %VIEWER%, die das mit sich machen lassen ;) "
+            ],
+            "zwei": [
+                "Alles klar, meine Lieben %VIEWER% PokeTrainer! Wir planen einen Überfall auf @%NAME%! Bitte benehmt euch ;) "
+            ]
+        }
+    ],
+    "unlurk": [
+        "Hey, @%NAME%! Schön, dass du wieder da bist!"
+    ],
+    "raid": [
+        {
+            "eins": [
+                "RAAAAAIIIIDD! Danke, an @%NAME% und die %VIEWER% Zuschauer! Hier ist der Link zu unserm Raider: https://www.twitch.tv/%NAME%"
+            ],
+            "zwei": [
+                "@%NAME%, du kommst auf meine Liste! - Shoutout-Liste natürlich! Auf meiner Tötungsliste stehtst du nicht, @%NAME%... noch nicht "
+            ]
+        }
+    ],
+    "sub": {
+        "nachricht": [
+            "@%NAME%, schickt uns folgende Flaschenpost: %NACHRICHT% ",
+            "Achtung! Achtung! Wir haben gerade folgende Nachricht vom Mars-Menschen @%NAME% erhalten: %NACHRICHT% "
+        ],
+        "onSub": [
+            "Oh ein neuer Sub! Danke, @%NAME% für die Unterstützung und viel Spaß mit den Emotes poketr9SMUG "
+        ],
+        "onGiftPaidUpgrade": [
+            "Danke, @%SENDER% für den Sub an @%NAME%! Und dir, @%NAME%, viel Spaß mit den Emotes poketr9SMUG "
+        ],
+        "onResub": [
+            "Ui, @%NAME% hat gerade für %MONTHS% geresubt! Vielen lieben Dank und viel Spaß mit den Emotes poketr9SMUG "
+        ],
+        "onSubGift": [
+            "Danki, @%NAME% für den Sub an @%RECIPIENT%! Und dir, @%RECIPIENT% , viel Spaß mit den Emotes poketr9SMUG "
+        ],
+        "onRandomSubGift": [
+            "Ach du O.o... @%NAME% hat heute die Spendierhosen an und schickt %SUBS% raus! Danke dir!! Damit hat er schon %COUNT% Subs verschenkt! poketr9SMUG "
+        ]
+    },
+    "bye": [
+        "@%NAME% Byeeeeeeee <3 ",
+        "@%NAME% Tschüüüüüüssssi <3 ",
+        "@%NAME% viel Spaß noch <3 ",
+        "@%NAME%, Jetzt kann ich dir endlich das sagen, was ich dir schon sagen wollte, als wir uns kennen gelernt haben: Auf Wiedersehen! Kappa "
+    ],
+    "me": {
+        "wg": [
+            "Mir geht es gut :) Danke, der Nachfrage",
+            "Supi, weil du da bist, @%NAME% poketr9Love"
+        ],
+        "else": [
+            "/me Zzzzzz",
+            "Hm, was? Oh, Entschuldigung @%NAME%, hab gerade nicht aufgepasst poketr9Ko",
+            "@%NAME% Tut mir leid, aber ich verstehe deine Nachricht nicht",
+            "@%NAME% jaaaaaa?",
+            "CuteDog "
+        ],
+        "alt": [
+            "@%NAME% Ich bin Version 4.5.2 und %ZAHL% Tage jung :) "
+        ],
+        "danke": [
+            "@%NAME% gerni poketr9Love",
+            "@%NAME% kein Problem <3 Dafür bin ich ja da"
+        ],
+        "sry": [
+            "@%NAME% alles jut <3 ",
+            "@%NAME% ist nicht wild, aber mach es bitte nicht nochmal <3 "
+        ]
+    },
+    "live": [
+        "Yeah! Ich bin nicht mehr alleine in diesem dunklen Internet! poketr9Lurk",
+        "/me kommt aus dem Pokeball"
+    ],
+    "nuzlocke": [
+        "Die aktuellen Nuzlocke-Regeln: 1. Der Nuzlock startet mit dem Erhalt der PokeBälle; 2. Es darf nur ein Pokemon pro Route gefangen werden; 2a. Eier zählen nicht; 2b. keine Dupes; 2c. Keine Legenden; 3. Jedes Pokemon muss benannt werden; 4. Wenn ein Pokemon K.O. geht, stirbt es"
+    ]
+}
