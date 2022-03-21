@@ -33,7 +33,10 @@ export class TwitchBot {
                 hostName: 'kleineslucario.herokuapp.com'
             }
             ),
-            secret: process.env.secret!
+            secret: process.env.secret!,
+            logger: {
+                minLevel: 7
+            }
         });
 
 
