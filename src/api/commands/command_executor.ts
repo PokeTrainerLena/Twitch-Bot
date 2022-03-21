@@ -1,7 +1,6 @@
-import { ChatClient, ChatUser, PrivateMessage } from 'twitch-chat-client';
-import { ApiClient } from "twitch";
 
-
+import { ApiClient } from "@twurple/api";
+import { ChatClient,PrivateMessage } from '@twurple/chat';
 export abstract class CommandExecutor implements Command {
     private _name: string;
     private _alias: string[];

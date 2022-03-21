@@ -1,7 +1,7 @@
-import { ChatClient } from "twitch-chat-client";
-import { EventSubListener } from "twitch-eventsub";
-import { EventSubChannelFollowEvent } from "twitch-eventsub/lib/Events/EventSubChannelFollowEvent";
-import { ApiClient, HelixUser } from "twitch";
+
+import { ApiClient, HelixUser } from "@twurple/api";
+import { EventSubChannelFollowEvent, EventSubListener } from "@twurple/eventsub";
+import { ChatClient } from '@twurple/chat';
 
 
 export class EventManager {

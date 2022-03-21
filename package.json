@@ -23,12 +23,12 @@
   },
   "homepage": "https://github.com/PokeTrainerLena/Twitch-Bot#readme",
   "dependencies": {
+    "@twurple/api": "^5.0.18",
+    "@twurple/auth": "^5.0.18",
+    "@twurple/chat": "^5.0.18",
+    "@twurple/eventsub": "^5.0.18",
     "dotenv": "^16.0.0",
-    "express": "^4.17.3",
-    "twitch": "^4.6.7",
-    "twitch-auth": "^4.6.7",
-    "twitch-chat-client": "^4.6.7",
-    "twitch-eventsub": "^4.6.7"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",

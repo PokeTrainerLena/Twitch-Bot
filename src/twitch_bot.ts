@@ -1,12 +1,13 @@
-import { AuthProvider } from "twitch-auth";
-import { ChatClient } from "twitch-chat-client";
-import { ApiClient } from "twitch";
+
 import { CommandManager } from "./api/commands/command_manager";
 import { SocialCommand } from "./commands/social_command";
 import crypto from "crypto";
-import { EnvPortAdapter, EventSubListener } from "twitch-eventsub";
 import { EventManager } from "./api/listener/listener_manager";
 import { FollowListener } from "./listeners/follwers/follow_listener";
+import { ApiClient } from "@twurple/api";
+import { AuthProvider } from "@twurple/auth";
+import { EventSubListener, EnvPortAdapter } from "@twurple/eventsub";
+import { ChatClient } from '@twurple/chat';
 
 
 // Lucario <3
@@ -25,13 +26,17 @@ export class TwitchBot {
 
         this.authProvider = authProvider;
         this.apiClient = new ApiClient({ authProvider });
-        this.chatClient = new ChatClient(authProvider, { channels: ['kleines_lucario'] });
-        const eventClient = new ApiClient({authProvider:eventAuth});
-        this.listener = new EventSubListener(eventClient, new EnvPortAdapter({
-            hostName: 'kleineslucario.herokuapp.com'
-        }), crypto.randomBytes(20).toString('hex'));
-        
-        
+        this.chatClient = new ChatClient({ authProvider, channels: ['kleines_lucario'] });
+        const eventClient = new ApiClient({ authProvider: eventAuth });
+        this.listener = new EventSubListener({
+            apiClient: eventClient, adapter: new EnvPortAdapter({
+                hostName: 'kleineslucario.herokuapp.com'
+            }
+            ),
+            secret: crypto.randomBytes(20).toString('hex')
+        });
+
+
 
         this.commandManger = new CommandManager(this.chatClient, this.apiClient);
         this.eventManager = new EventManager();

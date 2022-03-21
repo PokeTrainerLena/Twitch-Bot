@@ -1,31 +1,23 @@
 import 'dotenv/config'
-import { ClientCredentialsAuthProvider, RefreshableAuthProvider, StaticAuthProvider} from "twitch";
 import { TwitchBot } from "./twitch_bot";
 import { promises as fs } from 'fs';
+import { ClientCredentialsAuthProvider, RefreshingAuthProvider } from '@twurple/auth';
 
 async function main() {
     const clientId: string = process.env.clientId ?? "";
     const clientSecret = process.env.clientSecret ?? "";
     const eventAuth = new ClientCredentialsAuthProvider(clientId, clientSecret);
     const tokenData = JSON.parse(await fs.readFile('./tokens.json', 'utf-8'));
-    const auth = new RefreshableAuthProvider(
-        new StaticAuthProvider(clientId, tokenData.accessToken),
+    const authProvider = new RefreshingAuthProvider(
         {
+            clientId,
             clientSecret,
-            refreshToken: tokenData.refreshToken,
-            expiry: tokenData.expiryTimestamp === null ? null : new Date(tokenData.expiryTimestamp),
-            onRefresh: async ({ accessToken, refreshToken, expiryDate }) => {
-                const newTokenData = {
-                    accessToken,
-                    refreshToken,
-                    expiryTimestamp: expiryDate === null ? null : expiryDate.getTime()
-                };
-                await fs.writeFile('./tokens.json', JSON.stringify(newTokenData, null, 4), 'utf-8')
-            }
-        }
+            onRefresh: async newTokenData => await fs.writeFile('./tokens.json', JSON.stringify(newTokenData, null, 4), 'utf-8')
+        },
+        tokenData
     );
 
-    const bot = new TwitchBot(auth, eventAuth);
+    const bot = new TwitchBot(authProvider, eventAuth);
     await bot.start();
     bot.registerCommands();
     bot.registerEvents();

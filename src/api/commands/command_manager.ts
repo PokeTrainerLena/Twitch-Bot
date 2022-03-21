@@ -1,5 +1,5 @@
-import { ChatClient, PrivateMessage } from "twitch-chat-client";
-import { ApiClient } from "twitch";
+import { ApiClient } from "@twurple/api";
+import { ChatClient,PrivateMessage } from '@twurple/chat';
 import { CommandExecutor } from "./command_executor";
 
 
