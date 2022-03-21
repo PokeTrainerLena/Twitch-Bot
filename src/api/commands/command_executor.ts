@@ -1,23 +1,27 @@
 import { nicknames } from "../../messages/nicknames.json";
 import { ApiClient } from "@twurple/api";
-import { ChatClient, PrivateMessage } from '@twurple/chat';
+import { ChatClient, ChatUser, PrivateMessage } from '@twurple/chat';
 import { BIRTH_DAY, Dict, MAX_DELAY, MIN_DELAY, SENSITY_DELAY } from "../../utils/constants";
+import { timeStamp } from "console";
 
 
 type messageRply = {delay?: number, reply_id?: string};
+export type CommandResult = {status: boolean, exception?: string};
 
 export abstract class CommandExecutor implements Command {
     private _name: string;
     private _alias: string[];
     private _description: string;
+    private _hasPermission:(user: ChatUser) => boolean;
 
-    constructor(name: string, alias: string[], description: string) {
+    constructor(name: string, alias: string[], description: string, hasPermission:(user: ChatUser) => boolean) {
         this._name = name;
         this._alias = alias;
         this._description = description;
+        this._hasPermission = hasPermission;
       //  this._nicknames=nicknames
     }
-    abstract execute(command: string, channel: string, msg: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): boolean;
+    abstract execute(command: string, channel: string, msg: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult;
 
 
     get name(): string {
@@ -29,6 +33,9 @@ export abstract class CommandExecutor implements Command {
     }
     get description(): string {
         return this._description;
+    }
+    get hasPermission(): (user: ChatUser) => boolean {
+        return this._hasPermission;
     }
 
     sendMessage(chatClient: ChatClient, channel: string, message: string, reply_id?: string) {
@@ -68,5 +75,5 @@ export abstract class CommandExecutor implements Command {
 }
 
 export interface Command {
-    execute(command: string, channel: string, msg: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): boolean;
+    execute(command: string, channel: string, msg: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult;
 }

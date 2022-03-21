@@ -1,15 +1,19 @@
 import { ApiClient } from "@twurple/api";
 import { ChatClient, PrivateMessage } from '@twurple/chat';
-import { CommandExecutor } from "../api/commands/command_executor";
+import { CommandExecutor, CommandResult } from "../api/commands/command_executor";
 import { socials } from "../messages/socials.json";
 
 export class SocialCommand extends CommandExecutor {
 
     constructor() {
-        super("dc", ['discord', 'dc', 'donate', 'tip', 'doni', 'spende', 'freundescode', 'fc', 'mitspielen', 'instagram', 'ig', 'insta', 'youtube', 'yt'], "Damit gebe ich dir einen social-Link von Leni zurück");
+        super("dc", 
+        ['discord', 'dc', 'donate', 'tip', 'doni', 'spende', 'freundescode', 'fc', 'mitspielen', 'instagram', 'ig', 'insta', 'youtube', 'yt'],
+         "Damit gebe ich dir einen social-Link von Leni zurück",(user) => {
+             return user.isMod;
+         });
     }
 
-    execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): boolean {
+    execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
         switch (command) {
             case "discord":
             case "dc":
@@ -42,7 +46,7 @@ export class SocialCommand extends CommandExecutor {
 
         this.sendMessageDelay(chatClient,channel,nachricht[0],{reply_id: sender.id})
         //chatClient.say(channel, nachricht[0], { replyTo: sender.id });
-        return true;
+        return {status: true, exception: 'ABC'};
     }
 
 }

@@ -26,13 +26,26 @@ export class CommandManager {
                 const command = rawCommand.replace('!', '').toLowerCase();
                 const args = rawSplitteLine.slice(1, rawSplitteLine.length);
                 if (this.commands.has(command)) {
-                    const result = this.commands.get(command)!.execute(command, channel, msg, apiClient, chatClient, args);
+                    const commandInstance = this.commands.get(command)!;
+                    if (commandInstance.hasPermission(msg.userInfo)) {
+                        const result = commandInstance.execute(command, channel, msg, apiClient, chatClient, args);
+                        if (!result.status) {
+                            throw new Error(result.exception!);
+                        }
+                    }
                 }
             } else {
                 const command = message.replace('!', '').toLowerCase();
                 const args: string[] = [];
                 if (this.commands.has(command)) {
-                    const result = this.commands.get(command)!.execute(command, channel, msg, apiClient, chatClient, args);
+                    const commandInstance = this.commands.get(command)!;
+                    if (commandInstance.hasPermission(msg.userInfo)) {
+                        const result = commandInstance.execute(command, channel, msg, apiClient, chatClient, args);
+                        if (!result.status) {
+                            throw new Error(result.exception!);
+                        }
+                    }
+                    
                 }
             }
         }
