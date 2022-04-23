@@ -8,7 +8,6 @@ import { fail } from "../messages/Nachrichten.json";
 export class FailCommand extends CommandExecutor {
 
     private fail=0;
-    private canSendFail = true;
     private day = new Date().getDate();
     private today = new Date();
 
@@ -19,7 +18,7 @@ export class FailCommand extends CommandExecutor {
             return user.isMod;
         });
 
-    
+    this.timeout=10;
     setInterval(() => {
       this.today = new Date();
       if (this.day != this.today.getDate() && this.today.getHours() >= 6) {
@@ -31,9 +30,9 @@ export class FailCommand extends CommandExecutor {
     }
 
     execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
-        if (this.canSendFail) {
+        if (this.canSend) {
             var nachricht = fail;
-            this.canSendFail = false;
+            this.canSend = false;
             this.fail++;
             let ausgabe = "";
 
@@ -64,11 +63,11 @@ export class FailCommand extends CommandExecutor {
                 ].replace("%ZAHL%", this.fail.toString());
                 break;
             }
-            this.sendMessage(chatClient, channel,ausgabe,{});
+            this.sendMessage(chatClient, channel,ausgabe,{reply_id: sender.id});
             var that = this;
             setTimeout(function () {
-              that.canSendFail = true;
-            }, 10000);
+              that.canSend = true;
+            }, this.timeout*1000);
           }
           return {status: true};
     }
