@@ -10,6 +10,7 @@ import { EventSubListener, EnvPortAdapter } from "@twurple/eventsub";
 import { ChatClient } from '@twurple/chat';
 import { BdayCommand } from "./commands/bday_command";
 import { ChatInteractionCommand } from "./commands/interaction_command";
+import { FailCommand } from "./commands/fail_command";
 
 
 // Lucario <3
@@ -51,6 +52,7 @@ export class TwitchBot {
         this.commandManger.add(new ChatInteractionCommand());
         this.commandManger.add(new SocialCommand());
         this.commandManger.add(new BdayCommand());
+        this.commandManger.add(new FailCommand());
     }
     public registerEvents() {
         this.eventManager.register(new FollowListener());
