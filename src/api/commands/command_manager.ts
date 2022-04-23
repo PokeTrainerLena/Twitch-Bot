@@ -8,10 +8,8 @@ export class CommandManager {
     private commands: Map<string, CommandExecutor> = new Map();
 
     constructor(chatClient: ChatClient, apiClient: ApiClient) {
-       // chatClient.onMessage((channel, user, message,msg) => this.onCommand(channel, user, message, msg, apiClient, chatClient));
-       chatClient.onMessage((channel, user, message)=>{
-        chatClient.say(channel, "moin");
-       });
+        chatClient.onMessage((channel, user, message,msg) => this.onCommand(channel, user, message, msg, apiClient, chatClient));
+      
     }
 
     public add(command: CommandExecutor): void {
