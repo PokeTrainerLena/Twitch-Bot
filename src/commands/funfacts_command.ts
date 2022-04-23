@@ -2,26 +2,24 @@ import { ApiClient } from "@twurple/api";
 import { ChatClient, ChatUser, PrivateMessage } from '@twurple/chat';
 import { userInfo } from "os";
 import { CommandExecutor, CommandResult, Replacment } from "../api/commands/command_executor";
-import { bday } from "../messages/Nachrichten.json";
+import { funfacts } from "../messages/Nachrichten.json";
 
 
-export class BdayCommand extends CommandExecutor {
+export class FunfactsCommand extends CommandExecutor {
 
     constructor() {
-        super("bday",
-            ['bday'],
-            "Damit gebe ich dir einen social-Link von Leni zurück", (user) => {
-                return user.isMod;
-            });
+        super("funfact",
+            ['funfacts', 'funfact', 'fact', 'facts'],
+            "Lena ist zu Langweilig und ich muss wieder aushelfen?", (user) => true);
+            this.timeout=30;
     }
 
     execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
         if (this.canSend) {
             this.canSend = false;
             
-            args[1] = args[1].replace("@", "");
-            var replacment: Replacment = { key: "%NAME%", value: args[1] };
-            this.sendMessage(chatClient, channel, bday, { replacment: [replacment], reply_id: sender.id })
+
+            this.sendMessage(chatClient, channel, funfacts, { reply_id: sender.id })
 
             var that = this;
             setTimeout(function () {

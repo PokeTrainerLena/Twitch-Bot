@@ -59,7 +59,7 @@ export abstract class CommandExecutor implements Command {
 
         };
         if (randomDelay) {
-            
+
             delay = delay = this.getRandomDelay(message.length);
             console.log(delay);
             setTimeout(exe, delay);
@@ -91,13 +91,13 @@ export abstract class CommandExecutor implements Command {
         if (nicknames["user"].find((user) => user === username)) {
             //console.log(nicknames[username][this.getRandomInt(nicknames[username].length)]);
             return nameObject[username][this.getRandomInt(nameObject[username].length - 1)] ?? username;
-          } else {
+        } else {
             //console.log("nope");
             //username="@"+username;
             return username;
-          }
-        
-        
+        }
+
+
     }
     //end of class CommandExecutor
 }
