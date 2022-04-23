@@ -61,7 +61,7 @@ export class ChatInteractionCommand extends CommandExecutor {
         const username = sender.userInfo.userName;
         var ausgabe;
 
-        if (args[0]==undefined) {
+        if (args==undefined) {
             ausgabe=this.withoutReciever(args, username, nachricht);
         } else {
           if (meRegex.some((regex) => args[1].match(regex))) {
