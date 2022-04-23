@@ -9,7 +9,7 @@ import { AuthProvider } from "@twurple/auth";
 import { EventSubListener, EnvPortAdapter } from "@twurple/eventsub";
 import { ChatClient } from '@twurple/chat';
 import { BdayCommand } from "./commands/bday_command";
-import { ChatInteractionCommand } from "./commands/interaction_command copy";
+import { ChatInteractionCommand } from "./commands/interaction_command";
 
 
 // Lucario <3
