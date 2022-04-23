@@ -109,7 +109,12 @@
                         "Ähm... Danke? ",
                         "CuteDog "
                     ],
-                    "namen": [""]
+                    "namen": [
+                        "poketrainer_lena"
+                    ],
+                    "poketrainer_lena": [
+                        "Verraten vom eigenen Trainer :cry:"
+                    ]
                 }
             }
         },
@@ -162,7 +167,12 @@
                         "@%NAME% Waaaaaaas? Du gibst mir einen Kuss? Womit hab ich das denn verdient poketr9Love",
                         ":flushed:"
                     ],
-                    "namen": [""]
+                    "namen": [
+                        "poketrainer_lena"
+                    ],
+                    "poketrainer_lena": [
+                        "Verraten vom eigenen Trainer :cry:"
+                    ]
                 }
             }
         },
@@ -216,7 +226,12 @@
                         "/me blushing",
                         "Was? Eine Umarmung? Für mich? poketr9Love "
                     ],
-                    "namen": [""]
+                    "namen": [
+                        "poketrainer_lena"
+                    ],
+                    "poketrainer_lena": [
+                        "Verraten vom eigenen Trainer :cry:"
+                    ]
                 }
             }
         },
@@ -224,13 +239,13 @@
             "standard": {
                 "noTarget": [
                     "Ja fein, ganz fein!",
-            "/me schnurr <3 ",
-            "/me schnurr "
+                    "/me schnurr <3 ",
+                    "/me schnurr "
                 ],
                 "Target": [
                     "Oh ja, @%NAME2%, hast du ganz fein gemacht",
-            "/me @%NAME% tätschelt @%NAME2% den Kopf: pat,pat",
-            "@%NAME%, laut dir hat also @%NAME2% ein Lob verdient? Soso..."
+                    "/me @%NAME% tätschelt @%NAME2% den Kopf: pat,pat",
+                    "@%NAME%, laut dir hat also @%NAME2% ein Lob verdient? Soso..."
                 ],
                 "self": [
                     "@%NAME% Selbst lob stinkt",
@@ -269,9 +284,11 @@
                 "bot": {
                     "standard": [
                         "/me schnurr",
-            "Schau mal Lena! @%NAME% findet, ich habe etwas ganz dolle toll gemacht <3 poketr9Love"
+                        "Schau mal Lena! @%NAME% findet, ich habe etwas ganz dolle toll gemacht <3 poketr9Love"
                     ],
-                    "namen": ["poketrainer_lena"],
+                    "namen": [
+                        "poketrainer_lena"
+                    ],
                     "poketrainer_lena": [
                         "Aw, danki mein Trainer <3"
                     ]
