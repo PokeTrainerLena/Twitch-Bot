@@ -3,7 +3,7 @@ import { ChatClient,  PrivateMessage } from '@twurple/chat';
 import { CommandExecutor, CommandResult, Replacment } from "../api/commands/command_executor";
 import { ChatInteraction } from "../messages/ChatInteraction.json";
 
-import { config } from "../../config.json"
+//import { config } from "../../config.json"
 
 
 
