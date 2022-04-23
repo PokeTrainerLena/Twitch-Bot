@@ -1,0 +1,70 @@
+{
+    "config": {
+        "BLOCKED_WORDS": [
+            "(hure)",
+            "(schlampe)",
+            "(wanna become fam)",
+            "(miststück)",
+            "(bitch)",
+            "(nutte)",
+            "(fotze)",
+            "(scheide)",
+            "(system_probe)",
+            "(arsch)",
+            "(körpchengröße)",
+            "(muschi)",
+            "(wichser)",
+            "(wixxer)",
+            "(Buy follow)",
+            "(cock)",
+            "(glied)",
+            "(penis)",
+            "(schwanz)",
+            "(lutsch)",
+            "(blas)",
+            "(simp)",
+            "(kys)"
+        ],
+        "BYE_WORDS": [
+            "(bye)",
+            "(wiedersehen)",
+            "(gute nacht)",
+            "(man sieht sich)",
+            "(bis gleich)",
+            "(nachti)",
+            "(Tschü)",
+            "(bis zum nächst)",
+            "(bis nächst)"
+        ],
+        "ME": {
+            "standard": [
+                "(@l+u+c+a+r+i+o+)",
+                "(lenas_lucario)"
+            ],
+            "wg": [
+                "(wg)",
+                "(wie geht)",
+                "(und du)",
+                "(und dir)",
+                "(was geht)"
+            ],
+            "alt": [
+                "(version)",
+                "( alt)"
+            ],
+            "danke": [
+                "(dank)",
+                "(thank)",
+                "(thx)"
+            ],
+            "sry": [
+                "(sry)",
+                "(sorry)",
+                "(tschuldigung)",
+                "(verzeihung)",
+                "(tut mir.*leid)"
+            ]
+
+        }
+    }
+}

@@ -1,12 +1,14 @@
 import { ApiClient } from "@twurple/api";
 import { ChatClient, ChatUser, PrivateMessage } from '@twurple/chat';
-import { CommandExecutor, CommandResult } from "../api/commands/command_executor";
+import { CommandExecutor, CommandResult, Replacment } from "../api/commands/command_executor";
 import { ChatInteraction } from "../messages/ChatInteraction.json";
 
+import { config } from "../../config.json"
 
 
-
-
+const meRegex = config.ME.standard.map(
+    (e) => new RegExp(e.replace("@", ""), "gim")
+  );
 
 export class ChatInteractionCommand extends CommandExecutor {
 
@@ -17,9 +19,12 @@ export class ChatInteractionCommand extends CommandExecutor {
     }
 
     execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
-      /*  switch (command) {
+        const username = sender.userInfo.userName;
+        var replacment1:Replacment={key:"%NAME%",value:this.getName(username)}; 
+        var replacment2:Replacment={key:"%NAME2%",value:this.getName(args[1])}; 
+        switch (command) {
             case "explode":
-                var nachricht = ChatInteraction.explode;
+                var nachricht = this.Message(ChatInteraction.explode, channel, sender,  args);
                 break;
             case "pat":
             case "hug":
@@ -29,51 +34,120 @@ export class ChatInteractionCommand extends CommandExecutor {
             case "umarmung":
             case "love":
             case "liebe":
-                var nachricht = ChatInteraction.hug;
+                var nachricht = this.Message(ChatInteraction.hug,channel, sender,  args);
                 break;
             case "kiss":
             case "kuss":
             case "schmatzer":
             case "bussi":
-                var nachricht = ChatInteraction.kiss;
+                var nachricht = this.Message(ChatInteraction.kiss,channel, sender,  args);
                 break;
             case "loben":
             case "lob":
-                var nachricht = ChatInteraction.loben;
+                var nachricht = this.Message(ChatInteraction.loben, channel, sender,  args);
                 break;
             case "flirt":
-                var nachricht = ChatInteraction.flirt;
+                var nachricht = this.Message(ChatInteraction.flirt, channel, sender,  args);
                 break;
             default:
-                var nachricht;
+                var nachricht=this.Message(ChatInteraction, channel, sender,  args);
                 break;
         }
-        //this.sendMessage(chatClient, channel, nachricht, { reply_id: sender.id })
+        this.sendMessage(chatClient, channel, nachricht,{replacment:[replacment1,replacment2],reply_id: sender.id })
         return { status: true };
     }
 
+    Message(nachricht: any, channel: string, sender: PrivateMessage, args: string[]){
+        const username = sender.userInfo.userName;
+        var ausgabe="";
 
-    individReciever(chatClient: ChatClient, channel: string, args: string[], username: string, nachricht: Object, key: string) {
-        nachricht
+        if (args.length <= 1) {
+            ausgabe=this.withoutReciever(args, username, nachricht);
+        } else {
+          if (meRegex.some((regex) => args[1].match(regex))) {
+            ausgabe=this.botReciever(args, username, nachricht);
+    
+          } else if (args[1].includes(username)) {
+            var replacment:Replacment={key:"%NAME%",value:this.getName(username)}; 
+            
+            ausgabe= nachricht["standard"]["self"];
+    
+          } else if (
+            nachricht["TargetIndividuell"]["namen"].find(
+              (user: string) => user === args[1]
+            )
+          ) {
+            this.individReciever(args, username, nachricht);
+          } else {
+            if (
+              nachricht["SenderIndividuell"]["namen"].find(
+                (user: string) => user === username
+              )
+            ) {
+              //gibt es eine individ Nachricht für den Sender?
+              
+              ausgabe=  nachricht["SenderIndividuell"][username]["Target"];
+    
+            } else {
+              //kein individ Adress oder Sender
+              
+              ausgabe=  nachricht["standard"]["Target"];
+    
+            }
+          }
+        }
+
+        return "";
+     }
+
+    individReciever( args: string[], username: string, nachricht: any) {
+       // nachricht
         //individ Adress?
         if (
-            nachricht[key]["TargetIndividuell"][args[1]]["namen"].find(
-                (user) => user === username
+            nachricht["TargetIndividuell"][args[1]]["namen"].find(
+                (user: string) => user === username
             )
         ) {
             //individ Sender?
-            const replacement = { "%NAME%": this.getName(username), "%NAME2%": this.getName(args[1]) };
-            this.sendMessage(chatClient, channel, nachricht["TargetIndividuell"][args[1]][username], replacement);
+            return nachricht["TargetIndividuell"][args[1]][username];
 
         } else {
             //individ Adress aber kein individ Sender
-            const replacement = { "%NAME%": this.getName(username), "%NAME2%": this.getName(args[1]) };
-            this.sendMessage(chatClient, channel, nachricht["TargetIndividuell"][args[1]]["standard"], replacement);
+            return nachricht["TargetIndividuell"][args[1]]["standard"];
 
-        }*/
-        return { status: true };
+        }
+         
     }
-
+    botReciever( args: string[], username: string, nachricht: any) {
+        if (
+          nachricht["TargetIndividuell"]["bot"]["namen"].find(
+            (user:string) => user === username
+          )
+        ) {
+          //gibt es eine individ Nachricht für den Sender?
+          return nachricht["TargetIndividuell"]["bot"][username];
+    
+        } else {
+          //bot Adress aber kein individ Sender
+          return nachricht["TargetIndividuell"]["bot"]["standard"];
+    
+        }
+      }
+    
+      withoutReciever( args: string[], username: string, nachricht: any) {
+        if (
+          nachricht["SenderIndividuell"]["namen"].find(
+            (user:string) => user === username
+          )
+        ) {
+          //gibt es eine individ Nachricht für den Sender?
+          return nachricht["SenderIndividuell"][username]["noTarget"];
+    
+        } else {
+          //kein individ Adress oder Sender
+          return nachricht["standard"]["noTarget"];
+        }
+      }
 
 
 
