@@ -5,7 +5,7 @@ import { ChatInteraction } from "../messages/ChatInteraction.json";
 
 import { ME } from "../messages/regex.json"
 
-
+//funktioniert nicht
 
 export class ChatInteractionCommand extends CommandExecutor {
 
