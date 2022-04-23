@@ -58,6 +58,7 @@ export class TwitchBot {
         await this.chatClient.connect()
         const id = await this.apiClient.users.getUserByName("kleines_lucario");
         this.eventManager.start(this.listener, id!, this.apiClient, this.chatClient);
+        console.log("Bin da!");
         this.listener.listen();
     }
 
