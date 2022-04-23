@@ -12,8 +12,11 @@ import { BdayCommand } from "./commands/bday_command";
 import { ChatInteractionCommand } from "./commands/interaction_command";
 import { FailCommand } from "./commands/fail_command";
 import { FunfactsCommand } from "./commands/funfacts_command";
+import { LurkCommand } from "./commands/lurk_command";
+import { LurkHandler } from "./handler/lurk_handler";
 
-
+//const
+const lurkHandler = new LurkHandler();
 // Lucario <3
 export class TwitchBot {
 
@@ -55,6 +58,7 @@ export class TwitchBot {
         this.commandManger.add(new BdayCommand());
         this.commandManger.add(new FailCommand());
         this.commandManger.add(new FunfactsCommand());
+        this.commandManger.add(new LurkCommand(lurkHandler));
     }
     public registerEvents() {
         this.eventManager.register(new FollowListener());

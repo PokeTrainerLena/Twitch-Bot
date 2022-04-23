@@ -4,7 +4,7 @@ import { CommandExecutor, CommandResult, Replacment } from "../api/commands/comm
 import { LurkHandler } from "../handler/lurk_handler";
 import { lurk } from "../messages/lurk.json";
 
-export class SocialCommand extends CommandExecutor {
+export class LurkCommand extends CommandExecutor {
 
     private lurkHandler: LurkHandler;
 
