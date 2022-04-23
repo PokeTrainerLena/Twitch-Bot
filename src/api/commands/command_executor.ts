@@ -82,8 +82,19 @@ export abstract class CommandExecutor implements Command {
     }
 
     getName(username: string): string {
+
         var nameObject = nicknames as Dict;
-        return nameObject[username][this.getRandomInt(nameObject[username].length - 1)] ?? username;
+
+        if (nicknames["user"].find((user) => user === username)) {
+            //console.log(nicknames[username][this.getRandomInt(nicknames[username].length)]);
+            return nameObject[username][this.getRandomInt(nameObject[username].length - 1)] ?? username;
+          } else {
+            //console.log("nope");
+            //username="@"+username;
+            return username;
+          }
+        
+        
     }
     //end of class CommandExecutor
 }
