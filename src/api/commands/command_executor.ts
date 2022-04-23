@@ -11,6 +11,7 @@ export abstract class CommandExecutor implements Command {
     private _name: string;
     private _alias: string[];
     private _description: string;
+    //protected canSendFail = true;
     private _hasPermission: (user: ChatUser) => boolean;
 
     constructor(name: string, alias: string[], description: string, hasPermission: (user: ChatUser) => boolean) {
