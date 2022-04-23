@@ -25,7 +25,7 @@ export class CommandManager {
                 const rawSplitteLine = message.split(" ");
                 const rawCommand = rawSplitteLine[0];
                 const command = rawCommand.replace('!', '').toLowerCase();
-                const args = rawSplitteLine.slice(1, rawSplitteLine.length);
+                const args = rawSplitteLine.slice(0, rawSplitteLine.length);
                 if (this.commands.has(command)) {
                     const commandInstance = this.commands.get(command)!;
                     if (commandInstance.hasPermission(msg.userInfo)) {

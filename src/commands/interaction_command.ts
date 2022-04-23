@@ -64,16 +64,16 @@ export class ChatInteractionCommand extends CommandExecutor {
         if (args.length <= 1) {
             ausgabe=this.withoutReciever(args, username, nachricht);
         } else {
-          if (meRegex.some((regex) => args[0].match(regex))) {
+          if (meRegex.some((regex) => args[1].match(regex))) {
             ausgabe=this.botReciever(args, username, nachricht);//bot ist adrresiert
     
-          } else if (args[0].includes(username)) {
+          } else if (args[1].includes(username)) {
             
             ausgabe= nachricht["standard"]["self"];//selfdestruct
     
           } else if (
             nachricht["TargetIndividuell"]["namen"].find(//gibt es ein besonderes Ziel
-              (user: string) => user === args[0]
+              (user: string) => user === args[1]
             )
           ) {
             this.individReciever(args, username, nachricht);
@@ -103,16 +103,16 @@ export class ChatInteractionCommand extends CommandExecutor {
        // nachricht
         //individ Adress?
         if (
-            nachricht["TargetIndividuell"][args[0]]["namen"].find(
+            nachricht["TargetIndividuell"][args[1]]["namen"].find(
                 (user: string) => user === username
             )
         ) {
             //individ Sender?
-            return nachricht["TargetIndividuell"][args[0]][username];
+            return nachricht["TargetIndividuell"][args[1]][username];
 
         } else {
             //individ Adress aber kein individ Sender
-            return nachricht["TargetIndividuell"][args[0]]["standard"];
+            return nachricht["TargetIndividuell"][args[1]]["standard"];
 
         }
          
