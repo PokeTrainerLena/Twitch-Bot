@@ -1,5 +1,4 @@
 {
-    "config": {
         "BLOCKED_WORDS": [
             "(hure)",
             "(schlampe)",
@@ -67,4 +66,3 @@
 
         }
     }
-}

@@ -3,7 +3,7 @@ import { ChatClient,  PrivateMessage } from '@twurple/chat';
 import { CommandExecutor, CommandResult, Replacment } from "../api/commands/command_executor";
 import { ChatInteraction } from "../messages/ChatInteraction.json";
 
-//import { config } from "../../config.json"
+import { ME } from "../../regex.json"
 
 
 
@@ -55,7 +55,7 @@ export class ChatInteractionCommand extends CommandExecutor {
     }
 
     Message(nachricht: any, channel: string, sender: PrivateMessage, args: string[]){
-        const meRegex = config.ME.standard.map(
+        const meRegex = ME.standard.map(
     (e) => new RegExp(e.replace("@", ""), "gim")
   );
         const username = sender.userInfo.userName;
