@@ -68,7 +68,6 @@ export class ChatInteractionCommand extends CommandExecutor {
             ausgabe=this.botReciever(args, username, nachricht);
     
           } else if (args[1].includes(username)) {
-            var replacment:Replacment={key:"%NAME%",value:this.getName(username)}; 
             
             ausgabe= nachricht["standard"]["self"];
     
