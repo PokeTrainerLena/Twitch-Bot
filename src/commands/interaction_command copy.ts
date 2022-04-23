@@ -1,14 +1,14 @@
 import { ApiClient } from "@twurple/api";
-import { ChatClient, ChatUser, PrivateMessage } from '@twurple/chat';
+import { ChatClient,  PrivateMessage } from '@twurple/chat';
 import { CommandExecutor, CommandResult, Replacment } from "../api/commands/command_executor";
-import { ChatInteraction } from "../messages/ChatInteraction.json";
+//import { ChatInteraction } from "../messages/ChatInteraction.json";
 
-import { config } from "../../config.json"
+//import { config } from "../../config.json"
 
 
-const meRegex = config.ME.standard.map(
+/*const meRegex = config.ME.standard.map(
     (e) => new RegExp(e.replace("@", ""), "gim")
-  );
+  );*/
 
 export class ChatInteractionCommand extends CommandExecutor {
 
