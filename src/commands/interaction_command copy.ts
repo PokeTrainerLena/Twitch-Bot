@@ -19,7 +19,7 @@ export class ChatInteractionCommand extends CommandExecutor {
     }
 
     execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
-        const username = sender.userInfo.userName;
+       /* const username = sender.userInfo.userName;
         var replacment1:Replacment={key:"%NAME%",value:this.getName(username)}; 
         var replacment2:Replacment={key:"%NAME2%",value:this.getName(args[1])}; 
         switch (command) {
@@ -53,8 +53,8 @@ export class ChatInteractionCommand extends CommandExecutor {
                 var nachricht=this.Message(ChatInteraction, channel, sender,  args);
                 break;
         }
-        this.sendMessage(chatClient, channel, nachricht,{replacment:[replacment1,replacment2],reply_id: sender.id })
-        return { status: true };
+        this.sendMessage(chatClient, channel, nachricht,{replacment:[replacment1,replacment2],reply_id: sender.id })*/
+        return { status: true };/*
     }
 
     Message(nachricht: any, channel: string, sender: PrivateMessage, args: string[]){
@@ -145,7 +145,7 @@ export class ChatInteractionCommand extends CommandExecutor {
         } else {
           //kein individ Adress oder Sender
           return nachricht["standard"]["noTarget"];
-        }
+        }*/
       }
 
 
