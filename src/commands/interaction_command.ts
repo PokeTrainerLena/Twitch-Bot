@@ -59,20 +59,20 @@ export class ChatInteractionCommand extends CommandExecutor {
     (e) => new RegExp(e.replace("@", ""), "gim")
   );
         const username = sender.userInfo.userName;
-        var ausgabe="";
+        var ausgabe;
 
         if (args.length <= 1) {
             ausgabe=this.withoutReciever(args, username, nachricht);
         } else {
           if (meRegex.some((regex) => args[1].match(regex))) {
-            ausgabe=this.botReciever(args, username, nachricht);
+            ausgabe=this.botReciever(args, username, nachricht);//bot ist adrresiert
     
           } else if (args[1].includes(username)) {
             
-            ausgabe= nachricht["standard"]["self"];
+            ausgabe= nachricht["standard"]["self"];//selfdestruct
     
           } else if (
-            nachricht["TargetIndividuell"]["namen"].find(
+            nachricht["TargetIndividuell"]["namen"].find(//gibt es ein besonderes Ziel
               (user: string) => user === args[1]
             )
           ) {
