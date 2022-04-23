@@ -96,7 +96,7 @@ export class ChatInteractionCommand extends CommandExecutor {
           }
         }
 
-        return "";
+        return ausgabe;
      }
 
     individReciever( args: string[], username: string, nachricht: any) {
