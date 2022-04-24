@@ -49,7 +49,7 @@ export abstract class CommandExecutor implements Command {
                 var finalMessage = message[this.getRandomInt(message.length)] as string;
                 if (!(replacment == undefined)) {
                     replacment!.forEach(value => {
-                        finalMessage = finalMessage.replace(value.key, value.value);
+                        finalMessage = finalMessage.replaceAll(value.key, value.value);
                     });
                     !reply_id ? chatClient.say(channel, finalMessage) : chatClient.say(channel, finalMessage, { replyTo: reply_id });
                 } else {
