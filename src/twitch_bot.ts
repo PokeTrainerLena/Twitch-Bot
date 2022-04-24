@@ -1,4 +1,3 @@
-
 import { CommandManager } from "./api/commands/command_manager";
 import { SocialCommand } from "./commands/social_command";
 import crypto from "crypto";
@@ -54,7 +53,7 @@ export class TwitchBot {
             }
         });
 
-
+        
 
         this.commandManger = new CommandManager(this.chatClient, this.apiClient);
         this.eventManager = new EventManager();

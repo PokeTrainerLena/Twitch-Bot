@@ -17,7 +17,7 @@ export class SoCommand extends CommandExecutor {
     }
 
     execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
-        if (this.canSend) {
+        if (this.canSend&&args.length > 1) {
             this.canSend = false;
             //eigentlicher command beginnt
             args[1] = args[1].replace("@", "");

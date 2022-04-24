@@ -9,20 +9,24 @@ import { ME } from "../messages/regex.json"
 
 export class ChatInteractionCommand extends CommandExecutor {
 
+  
+
   constructor() {
     super("explode",
       ["explode", "pat", "hug", "knuddel", "knuddeln", "umarmen", "umarmung", "liebe", "love", "kiss", "kuss", "schmatzer", "bussi", "loben", "lob", "flirt"],
       "Bringe deine nächsten zum explodieren mit !explode @someone", (u) => true);
+      this
   }
 
   execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
     if (this.canSend) {
       this.canSend = false;
 
-      args[1] = args[1].replace("@", "");
+      
       const username = sender.userInfo.userName;
+      
       var replacment1: Replacment = { key: "%NAME%", value: this.getName(username) };
-      var replacment2: Replacment = { key: "%NAME2%", value: this.getName(args[1]) };
+      
       switch (command) {
         case "explode":
           var nachricht = this.Message(ChatInteraction.explode, channel, sender, args);
@@ -54,7 +58,13 @@ export class ChatInteractionCommand extends CommandExecutor {
           var nachricht = this.Message(ChatInteraction, channel, sender, args);
           break;
       }
-      this.sendMessage(chatClient, channel, nachricht, { replacment: [replacment1, replacment2], reply_id: sender.id });
+      if (args.length>1) {
+        var replacment2: Replacment = { key: "%NAME2%", value: this.getName(args[1]) };
+        this.sendMessage(chatClient, channel, nachricht, { replacment: [replacment1, replacment2], reply_id: sender.id });
+      } else {
+        this.sendMessage(chatClient, channel, nachricht, { replacment: [replacment1], reply_id: sender.id });
+      }
+      
 
 
       var that = this;
@@ -76,6 +86,7 @@ export class ChatInteractionCommand extends CommandExecutor {
     if (args.length <= 1) {
       ausgabe = this.withoutReciever(args, username, nachricht);
     } else {
+      args[1] = args[1].replace("@", "");
       if (meRegex.some((regex) => args[1].match(regex))) {
         ausgabe = this.botReciever(args, username, nachricht);//bot ist adrresiert
 

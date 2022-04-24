@@ -1,5 +1,5 @@
 import { nicknames } from "../../messages/nicknames.json";
-import { ApiClient } from "@twurple/api";
+import { ApiClient, HelixCreatePollData } from "@twurple/api";
 import { ChatClient, ChatUser, PrivateMessage } from '@twurple/chat';
 import { BIRTH_DAY, Dict, MAX_DELAY, MIN_DELAY, Nicknames, SENSITY_DELAY } from "../../utils/constants";
 
@@ -99,6 +99,16 @@ export abstract class CommandExecutor implements Command {
 
 
     }
+    async pollCreate(apiClient:ApiClient,titel:string,choices:string[]){
+        var data : HelixCreatePollData= {
+            bitsPerVote:10,
+            channelPointsPerVote:100,
+            title: titel,
+            choices: choices,
+            duration: 300
+        };
+    apiClient.polls.createPoll(await apiClient.users.getMe(),data)
+}
     //end of class CommandExecutor
 }
 

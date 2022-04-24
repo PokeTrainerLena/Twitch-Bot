@@ -20,11 +20,13 @@ export class VersionCommand extends CommandExecutor {
         if (this.canSend) {
             this.canSend = false;
             //eigentlicher command beginnt
+
             args[1] = args[1].replace("@", "");
             var replacment1: Replacment = { key: "%NAME%", value: this.getName(sender.userInfo.displayName) };
             var replacment2: Replacment = { key: "%ZAHL%", value: this.getAge().toString() };
             var replacment3: Replacment = { key: "%VERSION%", value: "5.0.0" };
-            this.sendMessage(chatClient, channel, version, { replacment: [replacment1,replacment2,replacment3], reply_id: sender.id })
+            this.sendMessage(chatClient, channel, version, { replacment: [replacment1,replacment2,replacment3], reply_id: sender.id });
+
             //eigentlicher command endet
             var that = this;
             setTimeout(function () {

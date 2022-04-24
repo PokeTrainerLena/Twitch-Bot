@@ -2,27 +2,31 @@ import { ApiClient } from "@twurple/api";
 import { ChatClient, ChatUser, PrivateMessage } from '@twurple/chat';
 import { userInfo } from "os";
 import { CommandExecutor, CommandResult, Replacment } from "../api/commands/command_executor";
-import { bday } from "../messages/Nachrichten.json";
 
 
-export class BdayCommand extends CommandExecutor {
+export class PollCommand extends CommandExecutor {
 
     constructor() {
-        super("bday",
-            ['bday'],
+        super("poll",
+            ['poll', 'umfrage'],
             "Damit gebe ich dir einen social-Link von Leni zurück", (user) => {
                 return user.isMod;
             });
     }
 
     execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
-        if (this.canSend&&args.length > 1) {
+        if (this.canSend && args.length > 1) {
             this.canSend = false;
-            
-            args[1] = args[1].replace("@", "");
-            var replacment: Replacment = { key: "%NAME%", value: this.getName(args[1]) };
-            this.sendMessage(chatClient, channel, bday, { replacment: [replacment], reply_id: sender.id })
-
+            var choices:string[];
+            const titel = args[1];
+            if (args.length > 6) {
+                choices = args.slice(2, 5);
+            } else if (args.length < 4) {
+                choices = args.slice(2);
+            } else {
+                choices = ["Jepp", "Nepp"];
+            }
+            this.pollCreate(apiClient,titel, choices);
             var that = this;
             setTimeout(function () {
                 that.canSend = true;
