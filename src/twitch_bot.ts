@@ -46,7 +46,7 @@ export class TwitchBot {
         const eventClient = new ApiClient({ authProvider: eventAuth });
         this.listener = new EventSubListener({
             apiClient: eventClient, adapter: new EnvPortAdapter({
-                hostName: 'kleineslucario.herokuapp.com'
+                hostName: 'https://fathomless-inlet-95207.herokuapp.com/'
             }
             ),
             secret: process.env.secret!,
