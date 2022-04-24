@@ -24,7 +24,7 @@ export class EventManager {
                 ev.on(e, apiClient, chatClient);
             });
         });
-        await listener.subscribeToChannelCheerEvents(user.id!, (e) => { // subscribeToChannelFollowEvents anpassen!!!
+        await listener.subscribeToChannelCheerEvents(await apiClient.users.getMe(), (e) => { // subscribeToChannelFollowEvents anpassen!!!
             this.events.get(EventSubChannelCheerEvent.name)?.forEach(ev => { // EventSubChannelFollowEvent anpassen!!!!
                 ev.on(e, apiClient, chatClient);
             });
