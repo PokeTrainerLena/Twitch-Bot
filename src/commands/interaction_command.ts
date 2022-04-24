@@ -21,7 +21,8 @@ export class ChatInteractionCommand extends CommandExecutor {
   execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
     if (this.canSend) {
       this.canSend = false;
-
+      var replacment2: Replacment;
+      !args[1] ? 0: replacment2 = { key: "%NAME2%", value: this.getName(args[1]) };
       
       const username = sender.userInfo.userName;
       
@@ -58,12 +59,13 @@ export class ChatInteractionCommand extends CommandExecutor {
           var nachricht = this.Message(ChatInteraction, channel, sender, args);
           break;
       }
-      if (args.length>1) {
+      !args[1] ? this.sendMessage(chatClient, channel, nachricht, { replacment: [replacment1], reply_id: sender.id }): this.sendMessage(chatClient, channel, nachricht, { replacment: [replacment1, replacment2!], reply_id: sender.id });
+      /*if (args.length>1) {
         var replacment2: Replacment = { key: "%NAME2%", value: this.getName(args[1]) };
         this.sendMessage(chatClient, channel, nachricht, { replacment: [replacment1, replacment2], reply_id: sender.id });
       } else {
         this.sendMessage(chatClient, channel, nachricht, { replacment: [replacment1], reply_id: sender.id });
-      }
+      }*/
       
 
 
