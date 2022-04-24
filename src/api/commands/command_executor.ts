@@ -71,8 +71,8 @@ export abstract class CommandExecutor implements Command {
 
     }
 
-    getRandomDelay(zahl: number): number {
-        return Math.round(MAX_DELAY - MAX_DELAY * Math.exp(SENSITY_DELAY * (zahl ^ 2))) + MIN_DELAY;
+    getRandomDelay(chars: number): number {
+        return Math.round(MAX_DELAY - (MAX_DELAY- MIN_DELAY) * Math.exp(SENSITY_DELAY * chars)) ;
     }
     getAge() {
         const jetzt = Date.now();

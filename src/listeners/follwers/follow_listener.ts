@@ -2,11 +2,12 @@
 import { ApiClient } from "@twurple/api";
 import { EventSubChannelFollowEvent } from "@twurple/eventsub";
 import { ChatClient } from '@twurple/chat';
-import { Listener } from "../../api/listener/listener_manager";
+import { Listener, Replacment } from "../../api/listener/listener_manager";
+import {follow} from "../../messages/events.json"
 
 
 
-export class FollowListener implements Listener<EventSubChannelFollowEvent> {
+export class FollowListener extends Listener<EventSubChannelFollowEvent> {
 
     type(): string {
         return EventSubChannelFollowEvent.name;
@@ -14,9 +15,8 @@ export class FollowListener implements Listener<EventSubChannelFollowEvent> {
 
     async on(event: EventSubChannelFollowEvent, apiClient: ApiClient, chatClient: ChatClient) {
         event.getBroadcaster().then(r => {
-            chatClient.say(r.name, "Danke für dein follow @" + event.userDisplayName).then().catch(reason => {
-                console.log(reason);
-            });
+            var replacment: Replacment = { key: "%NAME%", value: event.userDisplayName };
+            this.sendMessage(chatClient,r.name,follow,{replacment:[replacment]});
         }).catch(reason => {
             console.log(reason);
         });
