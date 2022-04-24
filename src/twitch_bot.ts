@@ -23,7 +23,7 @@ import { UnlurkCommand } from "./commands/unlurk_command";
 
 //const
 const lurkHandler = new LurkHandler();
-const soHandler = new LurkHandler();
+const soHandler = new LurkHandler(["poketrainer_lena"]);
 //const commands = new Map();
 
 // Lucario <3
