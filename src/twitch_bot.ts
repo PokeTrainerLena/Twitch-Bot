@@ -12,14 +12,13 @@ import { BdayCommand } from "./commands/bday_command";
 import { ChatInteractionCommand } from "./commands/interaction_command";
 import { FailCommand } from "./commands/fail_command";
 import { FunfactsCommand } from "./commands/funfacts_command";
-import { LurkCommand } from "./commands/lurk_command";
+import { LurkCommand, UnlurkCommand } from "./commands/lurk_command";
 import { LurkHandler } from "./handler/lurk_handler";
 import { HelpCommand } from "./commands/help_command";
 import { ModlobenCommand } from "./commands/modloben_command";
 import { NuzlockeCommand } from "./commands/nuzlocke_command";
 import { PauseCommand, StopCommand } from "./commands/pause_command";
 import { SoCommand } from "./commands/so_command";
-import { UnlurkCommand } from "./commands/unlurk_command";
 
 //const
 const lurkHandler = new LurkHandler();
@@ -68,7 +67,6 @@ export class TwitchBot {
         this.commandManger.add(new HelpCommand(this.commandManger.getCommands()));
         this.commandManger.add(new ChatInteractionCommand());
         this.commandManger.add(new LurkCommand(lurkHandler));
-
         this.commandManger.add(new ModlobenCommand());
         this.commandManger.add(new NuzlockeCommand());
         this.commandManger.add(new PauseCommand(soHandler));
@@ -76,6 +74,7 @@ export class TwitchBot {
         this.commandManger.add(new SoCommand());
         this.commandManger.add(new SocialCommand());
         this.commandManger.add(new UnlurkCommand(lurkHandler));
+        
         
 
     }
