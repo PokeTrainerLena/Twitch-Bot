@@ -72,7 +72,7 @@ export abstract class CommandExecutor implements Command {
     }
 
     getRandomDelay(chars: number): number {
-        return Math.round(MAX_DELAY - (MAX_DELAY- MIN_DELAY) * Math.exp(SENSITY_DELAY * chars)) ;
+        return Math.round(MAX_DELAY - (MAX_DELAY - MIN_DELAY) * Math.exp(SENSITY_DELAY * chars));
     }
     getAge() {
         const jetzt = Date.now();
@@ -99,16 +99,18 @@ export abstract class CommandExecutor implements Command {
 
 
     }
-    async pollCreate(apiClient:ApiClient,titel:string,choices:string[]){
-        var data : HelixCreatePollData= {
-            bitsPerVote:10,
-            channelPointsPerVote:100,
+    async pollCreate(apiClient: ApiClient, titel: string, choices: string[]) {
+        var data: HelixCreatePollData = {
+            bitsPerVote: 10,
+            channelPointsPerVote: 100,
             title: titel,
             choices: choices,
             duration: 300
         };
-    apiClient.polls.createPoll(await apiClient.users.getMe(),data)
-}
+        apiClient.polls.createPoll(await apiClient.users.getMe(), data).catch(reason => {
+            console.log(reason);
+        });
+    }
     //end of class CommandExecutor
 }
 
