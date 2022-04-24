@@ -22,11 +22,10 @@
                 "krispl1999": {
                     "Target": [
                         "Ah ja, Lukas sorgt wieder für ärger... hat jmd etwas anders erwartet? poketr9LOL ",
-                        "Ui, Lukas ärgert heute %NAME% und nicht meinen Trainer! Find ich gut!"
+                        "Ui, Lukas ärgert heute %NAME2% und nicht meinen Trainer! Find ich gut!"
                     ],
                     "noTarget": [
-                        "Ah ja, Lukas sorgt wieder für ärger... hat jmd etwas anders erwartet? poketr9LOL ",
-                        "Ui, Lukas ärgert heute %NAME% und nicht meinen Trainer! Find ich gut!"
+                        "Ah ja, Lukas sorgt wieder für ärger... hat jmd etwas anders erwartet? poketr9LOL "
                     ]
                 }
             },
@@ -71,7 +70,7 @@
                     "<3 @%NAME% und @%NAME2% schauen sich tief in die Augen... <3 "
                 ],
                 "self": [
-                    "@%NAME% Sag mal kennst du die Geschichte von Narziss? Hast dich in dein eigenes Spiegelbild verliebt?"
+                    "Sag mal kennst du die Geschichte von Narziss? Hast dich in dein eigenes Spiegelbild verliebt?"
                 ]
             },
             "SenderIndividuell": {
@@ -130,7 +129,7 @@
                     "lickR lickL "
                 ],
                 "self": [
-                    "@%NAME% Sag mal wie kann man sich selbst küssen? O.o"
+                    "@%NAME%, Sag mal: Wie kann man sich selbst küssen? O.o"
                 ]
             },
             "SenderIndividuell": {
@@ -164,14 +163,14 @@
                 },
                 "bot": {
                     "standard": [
-                        "@%NAME% Waaaaaaas? Du gibst mir einen Kuss? Womit hab ich das denn verdient poketr9Love",
+                        "Waaaaaaas? Du gibst mir einen Kuss, @%NAME% ? Womit hab ich das denn verdient poketr9Love",
                         ":flushed:"
                     ],
                     "namen": [
                         "poketrainer_lena"
                     ],
                     "poketrainer_lena": [
-                        "Verraten vom eigenen Trainer :cry:"
+                        "/me Schwanz wedel"
                     ]
                 }
             }
@@ -245,11 +244,11 @@
                 "Target": [
                     "Oh ja, @%NAME2%, hast du ganz fein gemacht",
                     "/me @%NAME% tätschelt @%NAME2% den Kopf: pat,pat",
-                    "@%NAME%, laut dir hat also @%NAME2% ein Lob verdient? Soso..."
+                    "Laut dir hat also @%NAME2% ein Lob verdient? Soso..."
                 ],
                 "self": [
-                    "@%NAME% Selbst lob stinkt",
-                    "@%NAME% musst du dich selbst loben, weil es sonst keiner tut? Vllt bist du ja der einzige, der findet, dass deine Taten lobenswert sind :thinking_face: "
+                    "Selbst lob stinkt",
+                    "Musst du dich selbst loben, weil es sonst keiner tut? Vllt bist du ja der einzige, der findet, dass deine Taten lobenswert sind :thinking_face: "
                 ]
             },
             "SenderIndividuell": {

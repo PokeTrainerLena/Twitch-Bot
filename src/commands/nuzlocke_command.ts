@@ -2,27 +2,28 @@ import { ApiClient } from "@twurple/api";
 import { ChatClient, ChatUser, PrivateMessage } from '@twurple/chat';
 import { userInfo } from "os";
 import { CommandExecutor, CommandResult, Replacment } from "../api/commands/command_executor";
-import { bday } from "../messages/Nachrichten.json";
+import { nuzlocke } from "../messages/Nachrichten.json";
 
 
-export class BdayCommand extends CommandExecutor {
+export class NuzlockeCommand extends CommandExecutor {
 
     constructor() {
-        super("bday",
-            ['bday'],
-            "Damit gebe ich dir einen social-Link von Leni zurück", (user) => {
-                return user.isMod;
+        super("nuzlocke",
+            ['nuzlocke'],
+            "Wenn du findest, dass ich und meine Mod-Kollegen gute arbeit leisten? Dann zeig es uns!", (user) => {
+                return true;
             });
+            this.timeout=30;
     }
 
     execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
         if (this.canSend) {
             this.canSend = false;
-            
-            args[1] = args[1].replace("@", "");
-            var replacment: Replacment = { key: "%NAME%", value: this.getName(args[1]) };
-            this.sendMessage(chatClient, channel, bday, { replacment: [replacment], reply_id: sender.id })
 
+            //eigentlicher command beginnt
+            this.sendMessage(chatClient, channel, nuzlocke, { reply_id: sender.id })
+            //eigentlicher command endet
+            
             var that = this;
             setTimeout(function () {
                 that.canSend = true;

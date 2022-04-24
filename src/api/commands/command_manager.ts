@@ -1,5 +1,6 @@
 import { ApiClient } from "@twurple/api";
 import { ChatClient, PrivateMessage } from '@twurple/chat';
+import { MarkOptions } from "perf_hooks";
 import { CommandExecutor } from "./command_executor";
 
 
@@ -18,6 +19,11 @@ export class CommandManager {
             this.commands.set(alias.toLowerCase(), command);
         });
     }
+
+
+public getCommands(){
+    return this.commands;
+}
 
     private onCommand(channel: string, user: string, message: string, msg: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient): void {
         if (message.startsWith("!")) {

@@ -28,40 +28,31 @@ export class FailCommand extends CommandExecutor {
   }
 
   execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
+    var replacment: Replacment = { key: "%ZAHL%", value: this.fail.toString() };
     if (this.canSend) {
       this.canSend = false;
       var nachricht = fail;
       this.fail++;
-      let ausgabe = "";
+      let ausgabe = [""];
 
       switch (true) {
         case this.fail == 1:
-          ausgabe = nachricht["eins"][
-            this.getRandomInt(nachricht["eins"].length)
-          ].replace("%ZAHL%", this.fail.toString());
+          ausgabe = nachricht["eins"]//[this.getRandomInt(nachricht["eins"].length)];
           break;
         case this.fail < 4:
-          ausgabe = nachricht["zwei"][
-            this.getRandomInt(nachricht["zwei"].length)
-          ].replace("%ZAHL%", this.fail.toString());
+          ausgabe = nachricht["zwei"]//[this.getRandomInt(nachricht["zwei"].length)];
           break;
         case this.fail < 6:
-          ausgabe = nachricht["drei"][
-            this.getRandomInt(nachricht["drei"].length)
-          ].replace("%ZAHL%", this.fail.toString());
+          ausgabe = nachricht["drei"]//[this.getRandomInt(nachricht["drei"].length)];
           break;
         case this.fail < 8:
-          ausgabe = nachricht["vier"][
-            this.getRandomInt(nachricht["vier"].length)
-          ].replace("%ZAHL%", this.fail.toString());
+          ausgabe = nachricht["vier"]//[this.getRandomInt(nachricht["vier"].length)];
           break;
         case this.fail > 7:
-          ausgabe = nachricht["fünf"][
-            this.getRandomInt(nachricht["fünf"].length)
-          ].replace("%ZAHL%", this.fail.toString());
+          ausgabe = nachricht["fünf"]//[this.getRandomInt(nachricht["fünf"].length)];
           break;
       }
-      this.sendMessage(chatClient, channel, ausgabe, { reply_id: sender.id });
+      this.sendMessage(chatClient, channel, ausgabe, { reply_id: sender.id, replacment: [replacment] });
       var that = this;
       setTimeout(function () {
         that.canSend = true;

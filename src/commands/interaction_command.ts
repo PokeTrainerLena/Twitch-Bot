@@ -19,6 +19,7 @@ export class ChatInteractionCommand extends CommandExecutor {
     if (this.canSend) {
       this.canSend = false;
 
+      args[1] = args[1].replace("@", "");
       const username = sender.userInfo.userName;
       var replacment1: Replacment = { key: "%NAME%", value: this.getName(username) };
       var replacment2: Replacment = { key: "%NAME2%", value: this.getName(args[1]) };

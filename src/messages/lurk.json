@@ -68,5 +68,9 @@
                 "@%NAME% beobachtet uns absofort schweigend mit %ZAHL% weiteren Lurkern poketr9FINE "
             ]
         }
-    }
+    },
+    "unlurk": [
+        "Hey! Schön, dass du wieder da bist!",
+        "Wb <3 poketr9Love "
+    ]
 }

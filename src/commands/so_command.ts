@@ -2,27 +2,29 @@ import { ApiClient } from "@twurple/api";
 import { ChatClient, ChatUser, PrivateMessage } from '@twurple/chat';
 import { userInfo } from "os";
 import { CommandExecutor, CommandResult, Replacment } from "../api/commands/command_executor";
-import { bday } from "../messages/Nachrichten.json";
+import { so } from "../messages/Nachrichten.json";
 
 
-export class BdayCommand extends CommandExecutor {
+export class SoCommand extends CommandExecutor {
 
     constructor() {
-        super("bday",
-            ['bday'],
-            "Damit gebe ich dir einen social-Link von Leni zurück", (user) => {
+        super("so",
+            ['so','shoutout'],
+            "Wenn du findest, dass ich und meine Mod-Kollegen gute arbeit leisten? Dann zeig es uns!", (user) => {
                 return user.isMod;
             });
+            this.timeout=10;
     }
 
     execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
         if (this.canSend) {
             this.canSend = false;
-            
+            //eigentlicher command beginnt
             args[1] = args[1].replace("@", "");
-            var replacment: Replacment = { key: "%NAME%", value: this.getName(args[1]) };
-            this.sendMessage(chatClient, channel, bday, { replacment: [replacment], reply_id: sender.id })
-
+            let streamer = args[1]
+            var replacment: Replacment = { key: "%NAME%", value: streamer };
+            this.sendMessage(chatClient, channel, so, {delay: 500, replacment: [replacment], reply_id: sender.id })
+            //eigentlicher command endet
             var that = this;
             setTimeout(function () {
                 that.canSend = true;

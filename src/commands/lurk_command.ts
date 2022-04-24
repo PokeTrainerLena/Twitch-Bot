@@ -9,9 +9,9 @@ export class LurkCommand extends CommandExecutor {
     private lurkHandler: LurkHandler;
 
     constructor(lurkHandler: LurkHandler) {
-        super("dc",
-            ['discord', 'dc', 'donate', 'tip', 'doni', 'spende', 'freundescode', 'fc', 'mitspielen', 'instagram', 'ig', 'insta', 'youtube', 'yt'],
-            "Damit gebe ich dir einen social-Link von Leni zurück", (u) => true);
+        super("lurk",
+            ['lurk', 'afk', 'klo', 'duschlurk', 'badlurk', "schlaflurk", "gaminglurk", "zockerlurk", "spielelurk", "kochlurk", "esslurk"],
+            "Du willst Lena signalisieren, dass du jetzt im Lurk bist? Dann nutze !lurk", (u) => true);
 
         this.lurkHandler = lurkHandler;
     }

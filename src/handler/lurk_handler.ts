@@ -40,4 +40,12 @@ export class LurkHandler {
     clear(){
         this.users=[];
     }
+
+    getRandom() {
+        return this.users[this.getRandomInt(this.users.length)];
+    }
+
+    getRandomInt(max:number) {
+        return Math.floor(Math.random() * max);
+    }
 }

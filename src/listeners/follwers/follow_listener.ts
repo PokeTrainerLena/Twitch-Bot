@@ -15,10 +15,10 @@ export class FollowListener implements Listener<EventSubChannelFollowEvent> {
     async on(event: EventSubChannelFollowEvent, apiClient: ApiClient, chatClient: ChatClient) {
         event.getBroadcaster().then(r => {
             chatClient.say(r.name, "Danke für dein follow @" + event.userDisplayName).then().catch(reason => {
-              //  console.log(reason);
+                console.log(reason);
             });
         }).catch(reason => {
-            //oconsole.log(reason);
+            console.log(reason);
         });
         
 

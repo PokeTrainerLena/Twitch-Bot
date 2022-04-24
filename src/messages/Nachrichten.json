@@ -81,7 +81,6 @@
         "Es gibt eine Schokolade, die 'die gute Schokolade' heißt und der fun in dem fact ist: Sie ist die beste Schokolade",
         "Ich verpasse Nackenschellen, wenn jemand nicht nett ist, also immer nett sein!",
         "Lena hat @Heinz_Uwe adoptiert",
-        "Lena studiert Computer Engineering (dt. technische Informatik)",
         "Nö",
         "Ist Lena so langweilig, dass ich aushelfen muss?",
         "Lena mag keine Glückskekse",
@@ -106,8 +105,8 @@
         "Eine Giraffe hat genause viele Halswirbel wie ein Mensch"
     ],
     "bday": [
-        "Alles gute zum Geburtstag @%NAME%! Wünsche dir alle Shinys und Schoki der Welt! Nachdem Lena sich ihren Lebensvorrat geklaut hat poketr9LOL ",
-        "Fröhlichen Tortentag @%NAME%! Welche Torte hast du heute und noch viel wichtiger: Bekomme ich etwas ab? poketr9Lurk poketr9Love"
+        "Alles gute zum Geburtstag @%NAME%! Wünsche dir alle Shinys und Schoki der Welt! Nachdem Lena sich ihren Lebensvorrat geklaut hat: Also alles poketr9LOL ",
+        "Fröhlichen Tortentag @%NAME%! Welche Torte hast du heute bekommen und noch viel wichtiger: Bekomme ich etwas ab? poketr9Lurk poketr9Love"
     ],
     "fail": {
         "eins": [
@@ -130,11 +129,11 @@
         ]
     },
     "modloben": [
-        "Jupp, wir Mods sind einfach Toll! Danke, @%NAME%, dass du es auch erkannt hast <3 ",
+        "Jupp, wir Mods sind einfach Toll! Danke dass du es auch erkannt hast <3 ",
         "/me schnurr <3 ",
         "/me schnurr "
     ],
-    "pause": [
+    "pause": 
         {
             "eins": [
                 "bb, Lena",
@@ -145,18 +144,17 @@
                 "Sie braucht ja mal wieder lange... poketr9Trash poketr9FINE ",
                 "Ich vermisse sie schon poketr9KyuSad "
             ]
-        }
-    ],
+        },
     "so": [
-        "Hey, ihr Liebe! Schaut doch mal bei @%NAME% vorbei! Hier ist der Link: https://www.twitch.tv/%NAME% ",
-        "Ich habe ganz viel gutes von @%NAME% gehört, also schaut doch mal vorbei und schickt etwas Liiiiiiebe <3 https://www.twitch.tv/%NAME% "
+        "Hey, ihr Liebe! Schaut doch mal bei @%NAME% vorbei! Hier ist der Link: www.twitch.tv/%NAME% ",
+        "Ich habe ganz viel gutes von @%NAME% gehört, also schaut doch mal vorbei und schickt etwas Liiiiiiebe <3 www.twitch.tv/%NAME% "
     ],
     "stop": [
         "Hey, Lena ist wieder da <3 ",
         "Was jetzt schon? Och mennö..."
     ],
     "version": [
-        "@%NAME% Ich bin Version 4.10.3 und %ZAHL% Tage jung :) "
+        "@%NAME% Ich bin Version %VERSION% und %ZAHL% Tage jung :) "
     ],
     "block": [
         {
@@ -291,9 +289,6 @@
             ]
         }
     ],
-    "unlurk": [
-        "Hey, @%NAME%! Schön, dass du wieder da bist!"
-    ],
     "raid": [
         {
             "eins": [
@@ -326,10 +321,9 @@
         ]
     },
     "bye": [
-        "@%NAME% Byeeeeeeee <3 ",
-        "@%NAME% Tschüüüüüüssssi <3 ",
-        "@%NAME% viel Spaß noch <3 ",
-        "@%NAME%, Jetzt kann ich dir endlich das sagen, was ich dir schon sagen wollte, als wir uns kennen gelernt haben: Auf Wiedersehen! Kappa "
+        "Byeeeeeeee <3 ",
+        "Tschüüüüüüssssi <3 ",
+        "Viel Spaß noch <3 "
     ],
     "me": {
         "wg": [
@@ -339,20 +333,20 @@
         "else": [
             "/me Zzzzzz",
             "Hm, was? Oh, Entschuldigung @%NAME%, hab gerade nicht aufgepasst poketr9Ko",
-            "@%NAME% Tut mir leid, aber ich verstehe deine Nachricht nicht",
-            "@%NAME% jaaaaaa?",
+            "Tut mir leid, aber ich verstehe deine Nachricht nicht",
+            "Jaaaaaa?",
             "CuteDog "
         ],
         "alt": [
-            "@%NAME% Ich bin Version 4.5.2 und %ZAHL% Tage jung :) "
+            "Ich bin Version %VERSION% und %ZAHL% Tage jung :) "
         ],
         "danke": [
-            "@%NAME% gerni poketr9Love",
-            "@%NAME% kein Problem <3 Dafür bin ich ja da"
+            "Gerni poketr9Love",
+            "Kein Problem <3 Dafür bin ich ja da"
         ],
         "sry": [
-            "@%NAME% alles jut <3 ",
-            "@%NAME% ist nicht wild, aber mach es bitte nicht nochmal <3 "
+            "Alles jut <3 ",
+            "Ist nicht wild, aber mach es bitte nicht nochmal <3 "
         ]
     },
     "live": [
