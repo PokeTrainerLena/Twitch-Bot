@@ -1,6 +1,6 @@
 
 import { ApiClient, HelixUser } from "@twurple/api";
-import { EventSubChannelFollowEvent, EventSubListener } from "@twurple/eventsub";
+import { EventSubChannelCheerEvent, EventSubChannelFollowEvent, EventSubListener } from "@twurple/eventsub";
 import { ChatClient } from '@twurple/chat';
 import { MAX_DELAY, MIN_DELAY, SENSITY_DELAY } from "../../utils/constants";
 
@@ -21,6 +21,11 @@ export class EventManager {
     public async start(listener: EventSubListener, user: HelixUser, apiClient: ApiClient, chatClient: ChatClient) {
         await listener.subscribeToChannelFollowEvents(user.id!, (e) => { // subscribeToChannelFollowEvents anpassen!!!
             this.events.get(EventSubChannelFollowEvent.name)?.forEach(ev => { // EventSubChannelFollowEvent anpassen!!!!
+                ev.on(e, apiClient, chatClient);
+            });
+        });
+        await listener.subscribeToChannelCheerEvents(user.id!, (e) => { // subscribeToChannelFollowEvents anpassen!!!
+            this.events.get(EventSubChannelCheerEvent.name)?.forEach(ev => { // EventSubChannelFollowEvent anpassen!!!!
                 ev.on(e, apiClient, chatClient);
             });
         });
