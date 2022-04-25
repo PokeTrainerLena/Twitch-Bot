@@ -18,7 +18,7 @@ import { ModlobenCommand } from "./commands/modloben_command";
 import { NuzlockeCommand } from "./commands/nuzlocke_command";
 import { PauseCommand, StopCommand } from "./commands/pause_command";
 import { SoCommand } from "./commands/so_command";
-import { CheerListener } from "./listeners/follwers/cheer_listener";
+//import { CheerListener } from "./listeners/follwers/cheer_listener";
 
 //const
 const lurkHandler = new LurkHandler();
@@ -80,7 +80,7 @@ export class TwitchBot {
     }
     public registerEvents() {
         this.eventManager.register(new FollowListener());
-        this.eventManager.register(new CheerListener());
+       // this.eventManager.register(new CheerListener());
     }
 
     public async start() {
