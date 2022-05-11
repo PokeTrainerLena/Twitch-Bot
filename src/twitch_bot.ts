@@ -38,7 +38,7 @@ export class TwitchBot {
     private listener: EventSubListener;
 
     constructor(authProvider: AuthProvider, eventAuth: AuthProvider) {
-
+        console.log(process.env.HEROKU_APP_NAME);
         this.authProvider = authProvider;
         this.apiClient = new ApiClient({ authProvider });
         this.chatClient = new ChatClient({ authProvider, channels: ['kleines_lucario'] });
