@@ -1,6 +1,6 @@
 import { ApiClient } from "@twurple/api";
-import { PrivateMessage, ChatClient } from "@twurple/chat/lib";
-import { CommandExecutor, CommandResult, Replacment } from "../api/commands/command_executor";
+import { PrivateMessage, ChatClient } from "@twurple/chat";
+import { CommandExecutor, CommandResult } from "../api/commands/command_executor";
 import { pause, stop } from "../messages/Nachrichten.json";
 import { PAUSE, startPipiPause, stopPipiPause } from "../utils/state";
 import { LurkHandler } from "../handler/lurk_handler";

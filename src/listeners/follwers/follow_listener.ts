@@ -1,7 +1,7 @@
 
 import { ApiClient } from "@twurple/api";
 import { EventSubChannelFollowEvent } from "@twurple/eventsub";
-import { ChatClient } from "@twurple/chat/lib";
+import { ChatClient } from "@twurple/chat";
 import { Listener, Replacment } from "../../api/listener/listener_manager";
 import {follow} from "../../messages/events.json"
 import { BasicFunctions } from "../../utils/basic_functions";

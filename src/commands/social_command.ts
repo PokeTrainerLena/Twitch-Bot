@@ -1,5 +1,5 @@
 import { ApiClient } from "@twurple/api";
-import { PrivateMessage, ChatClient } from "@twurple/chat/lib";
+import { PrivateMessage, ChatClient } from "@twurple/chat";
 import { CommandExecutor, CommandResult } from "../api/commands/command_executor";
 import { socials } from "../messages/socials.json";
 

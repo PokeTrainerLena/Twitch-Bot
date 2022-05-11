@@ -1,5 +1,5 @@
 import { ApiClient, HelixUser } from "@twurple/api";
-import { ChatClient } from "@twurple/chat/lib";
+import { ChatClient } from "@twurple/chat";
 import { EventSubChannelCheerEvent, EventSubChannelFollowEvent, EventSubListener } from "@twurple/eventsub";
 
 export type Replacment = { key: string, value: string };

@@ -1,5 +1,5 @@
 import { ApiClient } from "@twurple/api";
-import { PrivateMessage, ChatClient } from "@twurple/chat/lib";
+import { PrivateMessage, ChatClient } from "@twurple/chat";
 import { CommandExecutor, CommandResult, Replacment } from "../api/commands/command_executor";
 import { LurkHandler } from "../handler/lurk_handler";
 import { lurk, unlurk } from "../messages/lurk.json";

@@ -1,6 +1,5 @@
 import { ApiClient } from "@twurple/api";
-import { PrivateMessage, ChatClient } from "@twurple/chat/lib";
-import { MarkOptions } from "perf_hooks";
+import { PrivateMessage, ChatClient } from "@twurple/chat";
 import { CommandExecutor } from "./command_executor";
 
 

@@ -1,7 +1,7 @@
 import { nicknames } from "../../messages/nicknames.json";
 import { ApiClient, HelixCreatePollData } from "@twurple/api";
-import { PrivateMessage, ChatUser, ChatClient } from "@twurple/chat/lib";
-import { BIRTH_DAY, Dict, MAX_DELAY, MIN_DELAY, Nicknames, SENSITY_DELAY } from "../../utils/constants";
+import { PrivateMessage, ChatUser, ChatClient } from "@twurple/chat";
+import { BIRTH_DAY, Dict, MAX_DELAY, MIN_DELAY, SENSITY_DELAY } from "../../utils/constants";
 
 export type Replacment = { key: string, value: string };
 export type OptionalHeaders = { delay?: number, reply_id?: string, randomDelay?: boolean, replacment?: Replacment[] };
