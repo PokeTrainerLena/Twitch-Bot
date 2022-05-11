@@ -7,7 +7,7 @@ import {follow} from "../../messages/events.json"
 import { BasicFunctions } from "../../utils/basic_functions";
 
 
-export class FollowListener implements Listener<EventSubChannelFollowEvent> extends BasicFunctions  {
+export class FollowListener extends BasicFunctions implements Listener<EventSubChannelFollowEvent>   {
     
 
     type(): string {

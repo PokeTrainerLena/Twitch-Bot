@@ -28,7 +28,7 @@ export class FailCommand extends CommandExecutor {
   }
 
   execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
-    var replacment: Replacment = { key: "%ZAHL%", value: this.fail.toString() };
+    var replacment: Replacment = { key: "%ZAHL%", value: (this.fail+1).toString() };
     if (this.canSend) {
       this.canSend = false;
       var nachricht = fail;
