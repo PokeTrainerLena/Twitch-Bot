@@ -6,3 +6,5 @@ export const MIN_DELAY = 2000; //in millisekunden
 
 export type Dict = { [key: string]: string[]};
 export type Nicknames = { name: string[]};
+
+export const CHANNEL = "kleines_lucario";

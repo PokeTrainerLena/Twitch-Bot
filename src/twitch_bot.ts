@@ -18,6 +18,7 @@ import { SoCommand } from "./commands/so_command";
 import {ChatClient} from "@twurple/chat"
 import {AuthProvider} from "@twurple/auth"
 import { env } from "process";
+import { CHANNEL } from "./utils/constants";
 //import { CheerListener } from "./listeners/follwers/cheer_listener";
 
 //const
@@ -38,10 +39,9 @@ export class TwitchBot {
     private listener: EventSubListener;
 
     constructor(authProvider: AuthProvider, eventAuth: AuthProvider) {
-        console.log(process.env.HEROKU_APP_NAME);
         this.authProvider = authProvider;
         this.apiClient = new ApiClient({ authProvider });
-        this.chatClient = new ChatClient({ authProvider, channels: ['kleines_lucario'] });
+        this.chatClient = new ChatClient({ authProvider, channels: [CHANNEL] });
         const eventClient = new ApiClient({ authProvider: eventAuth });
         this.listener = new EventSubListener({
             apiClient: eventClient, adapter: new EnvPortAdapter({
@@ -85,7 +85,7 @@ export class TwitchBot {
 
     public async start() {
         await this.chatClient.connect()
-        const id = await this.apiClient.users.getUserByName("kleines_lucario");
+        const id = await this.apiClient.users.getUserByName(CHANNEL);
         this.eventManager.start(this.listener, id!, this.apiClient, this.chatClient);
         console.log("Bin da!");
         this.listener.listen();
