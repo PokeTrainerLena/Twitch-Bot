@@ -8,7 +8,7 @@ import { BasicFunctions } from "../../utils/basic_functions";
 
 
 
-export class CheerListener implements Listener<EventSubChannelCheerEvent> extends BasicFunctions {
+export class CheerListener extends BasicFunctions implements Listener<EventSubChannelCheerEvent>  {
 
     type(): string {
         return EventSubChannelCheerEvent.name;
