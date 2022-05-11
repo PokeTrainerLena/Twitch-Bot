@@ -4,10 +4,11 @@ import { EventSubChannelFollowEvent } from "@twurple/eventsub";
 import { ChatClient } from '@twurple/chat';
 import { Listener, Replacment } from "../../api/listener/listener_manager";
 import {follow} from "../../messages/events.json"
+import { BasicFunctions } from "../../utils/basic_functions";
 
 
-
-export class FollowListener extends Listener<EventSubChannelFollowEvent> {
+export class FollowListener implements Listener<EventSubChannelFollowEvent> extends BasicFunctions  {
+    
 
     type(): string {
         return EventSubChannelFollowEvent.name;
