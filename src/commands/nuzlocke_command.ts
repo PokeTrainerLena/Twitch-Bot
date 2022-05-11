@@ -1,6 +1,5 @@
 import { ApiClient } from "@twurple/api";
-import { ChatClient, ChatUser, PrivateMessage } from '@twurple/chat';
-import { userInfo } from "os";
+import { PrivateMessage, ChatClient } from "@twurple/chat/lib";
 import { CommandExecutor, CommandResult, Replacment } from "../api/commands/command_executor";
 import { nuzlocke } from "../messages/Nachrichten.json";
 

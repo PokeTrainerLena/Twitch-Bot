@@ -1,5 +1,5 @@
 import { ApiClient } from "@twurple/api";
-import { ChatClient, ChatUser, PrivateMessage } from '@twurple/chat';
+import { PrivateMessage, ChatClient } from "@twurple/chat/lib";
 import { userInfo } from "os";
 import { CommandExecutor, CommandResult, Replacment } from "../api/commands/command_executor";
 import { bday } from "../messages/Nachrichten.json";

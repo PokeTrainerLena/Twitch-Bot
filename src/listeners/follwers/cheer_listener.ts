@@ -1,7 +1,7 @@
 
 import { ApiClient } from "@twurple/api";
 import { EventSubChannelCheerEvent } from "@twurple/eventsub";
-import { ChatClient } from '@twurple/chat';
+import { ChatClient } from "@twurple/chat/lib";
 import { Listener, Replacment } from "../../api/listener/listener_manager";
 import { cheer } from "../../messages/events.json"
 import { BasicFunctions } from "../../utils/basic_functions";

@@ -1,12 +1,9 @@
 import { CommandManager } from "./api/commands/command_manager";
 import { SocialCommand } from "./commands/social_command";
-import crypto from "crypto";
 import { EventManager } from "./api/listener/listener_manager";
 import { FollowListener } from "./listeners/follwers/follow_listener";
 import { ApiClient } from "@twurple/api";
-import { AuthProvider } from "@twurple/auth";
 import { EventSubListener, EnvPortAdapter } from "@twurple/eventsub";
-import { ChatClient } from '@twurple/chat';
 import { BdayCommand } from "./commands/bday_command";
 import { ChatInteractionCommand } from "./commands/interaction_command";
 import { FailCommand } from "./commands/fail_command";
@@ -18,6 +15,8 @@ import { ModlobenCommand } from "./commands/modloben_command";
 import { NuzlockeCommand } from "./commands/nuzlocke_command";
 import { PauseCommand, StopCommand } from "./commands/pause_command";
 import { SoCommand } from "./commands/so_command";
+import { AuthProvider } from "@twurple/auth/lib";
+import { ChatClient } from "@twurple/chat/lib";
 //import { CheerListener } from "./listeners/follwers/cheer_listener";
 
 //const

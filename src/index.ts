@@ -1,7 +1,7 @@
 import 'dotenv/config'
 import { TwitchBot } from "./twitch_bot";
 import { promises as fs } from 'fs';
-import { ClientCredentialsAuthProvider, RefreshingAuthProvider } from '@twurple/auth';
+import { ClientCredentialsAuthProvider, RefreshingAuthProvider } from '@twurple/auth/lib';
 
 async function main() {
     const clientId: string = process.env.clientId ?? "";

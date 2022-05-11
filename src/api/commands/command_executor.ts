@@ -1,6 +1,6 @@
 import { nicknames } from "../../messages/nicknames.json";
 import { ApiClient, HelixCreatePollData } from "@twurple/api";
-import { ChatClient, ChatUser, PrivateMessage } from '@twurple/chat';
+import { PrivateMessage, ChatUser, ChatClient } from "@twurple/chat/lib";
 import { BIRTH_DAY, Dict, MAX_DELAY, MIN_DELAY, Nicknames, SENSITY_DELAY } from "../../utils/constants";
 
 export type Replacment = { key: string, value: string };
