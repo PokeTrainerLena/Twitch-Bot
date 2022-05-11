@@ -17,6 +17,7 @@ import { PauseCommand, StopCommand } from "./commands/pause_command";
 import { SoCommand } from "./commands/so_command";
 import {ChatClient} from "@twurple/chat"
 import {AuthProvider} from "@twurple/auth"
+import { env } from "process";
 //import { CheerListener } from "./listeners/follwers/cheer_listener";
 
 //const
@@ -44,7 +45,7 @@ export class TwitchBot {
         const eventClient = new ApiClient({ authProvider: eventAuth });
         this.listener = new EventSubListener({
             apiClient: eventClient, adapter: new EnvPortAdapter({
-                hostName: 'fathomless-inlet-95207.herokuapp.com'
+                hostName: process.env.HEROKU_APP_NAME + '.herokuapp.com'
             }
             ),
             secret: process.env.secret!,
