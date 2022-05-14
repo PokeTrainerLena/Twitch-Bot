@@ -1,13 +1,13 @@
-import { nicknames } from "../../messages/nicknames.json";
+//import { nicknames } from "../../messages/nicknames.json";
 import { ApiClient, HelixCreatePollData } from "@twurple/api";
 import { PrivateMessage, ChatUser, ChatClient } from "@twurple/chat";
-import { BIRTH_DAY, Dict, MAX_DELAY, MIN_DELAY, SENSITY_DELAY } from "../../utils/constants";
+import { BasicFunctions } from "../../utils/basic_functions";
+//import { BIRTH_DAY, Dict, MAX_DELAY, MIN_DELAY, SENSITY_DELAY } from "../../utils/constants";
 
-export type Replacment = { key: string, value: string };
-export type OptionalHeaders = { delay?: number, reply_id?: string, randomDelay?: boolean, replacment?: Replacment[] };
+
 export type CommandResult = { status: boolean, exception?: string };
 
-export abstract class CommandExecutor implements Command {
+export abstract class CommandExecutor extends BasicFunctions implements Command {
     private _name: string;
     private _alias: string[];
     private _description: string;
@@ -17,6 +17,7 @@ export abstract class CommandExecutor implements Command {
     private _hasPermission: (user: ChatUser) => boolean;
 
     constructor(name: string, alias: string[], description: string, hasPermission: (user: ChatUser) => boolean) {
+        super();
         this._name = name;
         this._alias = alias;
         this._description = description;
@@ -40,7 +41,7 @@ export abstract class CommandExecutor implements Command {
         return this._hasPermission;
     }
 
-    sendMessage(chatClient: ChatClient, channel: string, message: string | Array<string>, { delay, reply_id, randomDelay = true, replacment }: OptionalHeaders) {
+    /*sendMessage(chatClient: ChatClient, channel: string, message: string | Array<string>, { delay, reply_id, randomDelay = true, replacment }: OptionalHeaders) {
 
         var exe = () => {
             if (typeof message === "string") {
@@ -74,11 +75,47 @@ export abstract class CommandExecutor implements Command {
     getRandomDelay(chars: number): number {
         return Math.round(MAX_DELAY - (MAX_DELAY - MIN_DELAY) * Math.exp(SENSITY_DELAY * chars));
     }
+    
     getAge() {
+        const birthdate = new Date("2022,2,2");
         const jetzt = Date.now();
-        const diffTime = Math.abs(jetzt.valueOf() - BIRTH_DAY.valueOf());
-        return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    }
+        const difference = Math.abs(jetzt - birthdate.getMilliseconds());
+        var date = new Date(0);
+        date.setSeconds(Math.ceil(difference / 1000));
+        var timeFormatted = ``;
+        var days = date.getDate();
+        var months = date.getMonth();
+        var year = date.getFullYear() -1970;
+    
+        if (year > 1) {
+          timeFormatted = timeFormatted + `${year.toString()} Jahre `;
+        }
+        else if (year == 1) {
+          timeFormatted = timeFormatted + `ein Jahr `;
+        }
+    
+        if (months > 1) {
+          if ((!(timeFormatted == ``))&&days<=0) {
+            timeFormatted = timeFormatted + ` und `;
+          }
+          timeFormatted = timeFormatted + `${months.toString()} Monate `;
+        }
+        else if (months == 1) {
+          timeFormatted = timeFormatted + `ein Monat `;
+        }
+    
+        if (days > 1) {
+          if (!(timeFormatted == ``)) {
+            timeFormatted = timeFormatted + ` und `;
+          }
+          timeFormatted = timeFormatted + ` ${days.toString()} Tage `;
+        }
+        else if (days == 1) {
+          timeFormatted = timeFormatted + `einen Tag `;
+        }
+    
+        return timeFormatted;
+      }
 
     getRandomInt(max: number) {
         return Math.floor(Math.random() * max);
@@ -98,7 +135,7 @@ export abstract class CommandExecutor implements Command {
         }
 
 
-    }
+    }*/
     async pollCreate(apiClient: ApiClient, titel: string, choices: string[]) {
         var data: HelixCreatePollData = {
             bitsPerVote: 10,

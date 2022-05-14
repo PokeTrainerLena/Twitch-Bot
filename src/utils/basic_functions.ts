@@ -1,7 +1,10 @@
 import { ChatClient } from "@twurple/chat";
-import { OptionalHeaders } from "../api/listener/listener_manager";
-import { MAX_DELAY, MIN_DELAY, SENSITY_DELAY } from "./constants";
+//import { OptionalHeaders } from "../api/listener/listener_manager";
+import { Dict, MAX_DELAY, MIN_DELAY, SENSITY_DELAY } from "./constants";
+import { nicknames } from "../messages/nicknames.json";
 
+export type Replacment = { key: string, value: string };
+export type OptionalHeaders = { delay?: number, reply_id?: string, randomDelay?: boolean, replacment?: Replacment[] };
 
 export class BasicFunctions {
 
@@ -43,5 +46,60 @@ export class BasicFunctions {
         return Math.floor(Math.random() * max);
     }
 
+    getName(username: string): string {
+
+        var nameObject = nicknames as Dict;
+
+        if (nicknames["user"].find((user) => user === username)) {
+            //console.log(nicknames[username][this.getRandomInt(nicknames[username].length)]);
+            return nameObject[username][this.getRandomInt(nameObject[username].length - 1)] ?? username;
+        } else {
+            //console.log("nope");
+            //username="@"+username;
+            return username;
+        }
+
+
+    }
+
+    getAge() {
+        const birthdate = new Date("2022,2,2");
+        const jetzt = Date.now();
+        const difference = Math.abs(jetzt - birthdate.getMilliseconds());
+        var date = new Date(0);
+        date.setSeconds(Math.ceil(difference / 1000));
+        var timeFormatted = ``;
+        var days = date.getDate();
+        var months = date.getMonth();
+        var year = date.getFullYear() -1970;
     
+        if (year > 1) {
+          timeFormatted = timeFormatted + `${year.toString()} Jahre `;
+        }
+        else if (year == 1) {
+          timeFormatted = timeFormatted + `ein Jahr `;
+        }
+    
+        if (months > 1) {
+          if ((!(timeFormatted == ``))&&days<=0) {
+            timeFormatted = timeFormatted + ` und `;
+          }
+          timeFormatted = timeFormatted + `${months.toString()} Monate `;
+        }
+        else if (months == 1) {
+          timeFormatted = timeFormatted + `ein Monat `;
+        }
+    
+        if (days > 1) {
+          if (!(timeFormatted == ``)) {
+            timeFormatted = timeFormatted + ` und `;
+          }
+          timeFormatted = timeFormatted + ` ${days.toString()} Tage `;
+        }
+        else if (days == 1) {
+          timeFormatted = timeFormatted + `einen Tag `;
+        }
+    
+        return timeFormatted;
+      }
 }
