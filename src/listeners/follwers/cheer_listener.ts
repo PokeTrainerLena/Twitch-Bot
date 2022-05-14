@@ -2,11 +2,10 @@
 import { ApiClient } from "@twurple/api";
 import { EventSubChannelCheerEvent } from "@twurple/eventsub";
 import { ChatClient } from "@twurple/chat";
-import { Listener, Replacment } from "../../api/listener/listener_manager";
+import { Listener } from "../../api/listener/listener_manager";
 import { cheer } from "../../messages/events.json"
 import { BasicFunctions } from "../../utils/basic_functions";
-
-
+import { Replacment } from "../../utils/basic_functions";
 
 export class CheerListener extends BasicFunctions implements Listener<EventSubChannelCheerEvent>  {
 

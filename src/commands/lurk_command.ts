@@ -1,8 +1,9 @@
 import { ApiClient } from "@twurple/api";
 import { PrivateMessage, ChatClient } from "@twurple/chat";
-import { CommandExecutor, CommandResult, Replacment } from "../api/commands/command_executor";
+import { CommandExecutor, CommandResult } from "../api/commands/command_executor";
 import { LurkHandler } from "../handler/lurk_handler";
 import { lurk, unlurk } from "../messages/lurk.json";
+import { Replacment } from "../utils/basic_functions";
 
 export class LurkCommand extends CommandExecutor {
 

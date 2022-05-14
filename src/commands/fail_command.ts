@@ -1,8 +1,8 @@
 import { ApiClient } from "@twurple/api";
 import { PrivateMessage, ChatClient } from "@twurple/chat";
-import { CommandExecutor, CommandResult, Replacment } from "../api/commands/command_executor";
+import { CommandExecutor, CommandResult } from "../api/commands/command_executor";
 import { fail } from "../messages/Nachrichten.json";
-
+import { Replacment } from "../utils/basic_functions";
 
 export class FailCommand extends CommandExecutor {
 

@@ -1,8 +1,7 @@
 import { ApiClient, HelixUser } from "@twurple/api";
 import { ChatClient } from "@twurple/chat";
 import { EventSubChannelCheerEvent, EventSubChannelFollowEvent, EventSubListener } from "@twurple/eventsub";
-
-export type Replacment = { key: string, value: string };
+import { Replacment } from "../../utils/basic_functions";
 export type OptionalHeaders = { delay?: number, reply_id?: string, randomDelay?: boolean, replacment?: Replacment[] };
 
 export class EventManager {
