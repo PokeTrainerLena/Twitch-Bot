@@ -21,6 +21,7 @@ export class ChatInteractionCommand extends CommandExecutor {
   execute(command: string, channel: string, sender: PrivateMessage, apiClient: ApiClient, chatClient: ChatClient, args: string[]): CommandResult {
     if (this.canSend) {
       this.canSend = false;
+      
       var replacment2: Replacment;
       !args[1] ? 0: replacment2 = { key: "%NAME2%", value: this.getName(args[1]) };
       

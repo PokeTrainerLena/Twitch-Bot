@@ -1,76 +1,89 @@
 {
     "lurk": {
-        "keys": [
-            "lurk",
-            "duschlurk",
-            "schlaflurk",
-            "gaminglurk",
-            "esslurk",
-            "kochlurk"
-        ],
         "lurk": {
             "ersterLurker": [
-                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen poketr9Lurk",
-                "@%NAME% beobachtet uns absofort schweigend poketr9FINE "
+                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk poketr9Heart Hoffe bald wieder von dir zu lesen poketr9Lurk",
+                "@%NAME% beobachtet uns absofort schweigend poketr9Fine "
             ],
             "mehrereLurker": [
-                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen ;) Momentan sind %ZAHL% Leute im Lurk poketr9Lurk",
-                "@%NAME% beobachtet uns absofort schweigend mit %ZAHL% weiteren Lurkern poketr9FINE "
+                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk poketr9Lurk Hoffe bald wieder von dir zu lesen poketr9Heart Momentan sind %ZAHL% Leute im Lurk poketr9Lurk",
+                "@%NAME% beobachtet uns absofort schweigend mit %ZAHL% weiteren Lurkern poketr9Fine "
             ]
         },
         "duschlurk": {
             "ersterLurker": [
-                "Gute Dusche/ Bad @%NAME%! Wünsche dir viel Entspannung! Und sag mir bescheid, falls du gesellschaft willst :wink: :smirk:",
-                "Gute Dusche/ Bad @%NAME%! Wünsche dir viel Entspannung! <3"
+                "Gute Dusche/ Bad @%NAME%! Wünsche dir viel Entspannung! Und sag mir bescheid, falls du gesellschaft willst poketr9Smug ",
+                "Gute Dusche/ Bad @%NAME%! Wünsche dir viel Entspannung! poketr9Heart"
             ],
             "mehrereLurker": [
-                "Gute Dusche/ Bad @%NAME%! Wünsche dir viel Entspannung! Und sag mir bescheid, falls du gesellschaft willst :wink: :smirk:",
-                "Gute Dusche/ Bad @%NAME%! Wünsche dir viel Entspannung! <3"
+                "Gute Dusche/ Bad @%NAME%! Wünsche dir viel Entspannung! Und sag mir bescheid, falls du gesellschaft willst poketr9Smug",
+                "Gute Dusche/ Bad @%NAME%! Wünsche dir viel Entspannung! poketr9Heart"
             ]
         },
         "schlaflurk": {
             "ersterLurker": [
-                "Gute Nacht @%NAME%... Lalelu, nur der Mann im Mond schaut zu - Hat jemand noch genug Poke, um Lena für uns singen zu lassen ? Poketr9Lachen ",
-                "Schlaf gut @%NAME% und danke für deine Unterstützung <3 "
+                "Gute Nacht @%NAME%... Lalelu, nur der Mann im Mond schaut zu - Hat jemand noch genug Poke, um Lena für uns singen zu lassen ? poketr9Lul ",
+                "Schlaf gut @%NAME% und danke für deine Unterstützung poketr9Heart "
             ],
             "mehrereLurker": [
-                "Gute Nacht @%NAME%... Lalelu, nur der Mann im Mond schaut zu - Hat jemand noch genug Poke, um Lena für uns singen zu lassen ? Poketr9Lachen ",
-                "Schlaf gut @%NAME% und danke für deine Unterstützung <3 "
+                "Gute Nacht @%NAME%... Lalelu, nur der Mann im Mond schaut zu - Hat jemand noch genug Poke, um Lena für uns singen zu lassen ? poketr9Lul ",
+                "Schlaf gut @%NAME% und danke für deine Unterstützung poketr9Heart "
             ]
         },
         "gaminglurk": {
             "ersterLurker": [
-                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen poketr9Lurk",
-                "@%NAME% beobachtet uns absofort schweigend poketr9FINE "
+                "Danke fürs Zuschauen, @%NAME%, und viel Spaß beim Zocken poketr9Heart poketr9Lurk",
+                "Viel Erfolg beim Zocken, @%NAME%! Mach sie fertig poketr9Smug "
             ],
             "mehrereLurker": [
-                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen ;) Momentan sind %ZAHL% Leute im Lurk poketr9Lurk",
-                "@%NAME% beobachtet uns absofort schweigend mit %ZAHL% weiteren Lurkern poketr9FINE "
+                "Danke fürs Zuschauen, @%NAME%, und viel Spaß beim Zocken poketr9Heart poketr9Lurk",
+                "Viel Erfolg beim Zocken, @%NAME%! Mach sie fertig poketr9Smug "
             ]
         },
         "esslurk": {
             "ersterLurker": [
-                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen poketr9Lurk",
-                "@%NAME% beobachtet uns absofort schweigend poketr9FINE "
+                "Danke fürs Zuschauen, @%NAME%, und guten Hunger! Hoffe es schmeckt poketr9Heart poketr9Lurk",
+                "Guten Appetit, @%NAME%! Und lass mir gerne was übrig poketr9Smug "
             ],
             "mehrereLurker": [
-                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen ;) Momentan sind %ZAHL% Leute im Lurk poketr9Lurk",
-                "@%NAME% beobachtet uns absofort schweigend mit %ZAHL% weiteren Lurkern poketr9FINE "
+                "Danke fürs Zuschauen, @%NAME%, und guten Hunger! Hoffe es schmeckt poketr9Heart poketr9Lurk",
+                "Guten Appetit, @%NAME%! Und lass mir gerne was übrig poketr9Smug "
             ]
         },
         "kochlurk": {
             "ersterLurker": [
-                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen poketr9Lurk",
-                "@%NAME% beobachtet uns absofort schweigend poketr9FINE "
+                "Danke fürs Zuschauen, @%NAME%, und viel Spaß beim Kochen poketr9Heart poketr9Lurk",
+                "Viel Erfolg beim Kochen, @%NAME%! Und gib mir gerne was ab poketr9Smug "
             ],
             "mehrereLurker": [
-                "Hey, @%NAME%! Danke fürs Zuschauen und viel Spaß im Lurk <3 Hoffe bald wieder von dir zu lesen ;) Momentan sind %ZAHL% Leute im Lurk poketr9Lurk",
-                "@%NAME% beobachtet uns absofort schweigend mit %ZAHL% weiteren Lurkern poketr9FINE "
+                "Danke fürs Zuschauen, @%NAME%, und viel Spaß beim Kochen poketr9Heart poketr9Lurk",
+                "Viel Erfolg beim Kochen, @%NAME%! Und gib mir gerne was ab poketr9Smug "
             ]
         }
     },
-    "unlurk": [
-        "Hey! Schön, dass du wieder da bist!",
-        "Wb <3 poketr9Love "
-    ]
+    "unlurk": {
+        "lurk": [
+            "Hey, @%NAME%! Schön, dass du wieder da bist! poketr9Heart ",
+            "Willkommen zurück @%NAME%! poketr9Heart "
+        ],
+        "duschlurk": [
+            "Hey, @%NAME%! Wie war die Dusche? poketr9Heart "
+        ],
+        "gaminglurk": [
+            "Hey, @%NAME%! Wie lief das Spiel? poketr9Heart ",
+            "Hey, @%NAME%! Was hast du eigentlich gespielt? poketr9Confused "
+        ],
+        "kochlurk": [
+            "Hey, @%NAME%, schön, dass du wieder da bist! Hast du mir etwas mitgebracht? poketr9Heart poketr9Confused ",
+            "Hey, @%NAME%! Was hast du eigentlich gekocht? poketr9Confused "
+        ],
+        "schlaflurk": [
+            "Hey, @%NAME%! Ich hoffe es war sehr erholsam und du fühlst dich jetzt ausgeschlafen poketr9Heart ",
+            "Hey, @%NAME%! Wilkommen zurück! Wie war dein Schlaf? poketr9Confused "
+        ],
+        "esslurk": [
+            "Hey, @%NAME%! Wie war dein Essen? poketr9Heart ",
+            "Hey, @%NAME%! Was hast du eigentlich gegessen? poketr9Confused "
+        ]
+    }
 }

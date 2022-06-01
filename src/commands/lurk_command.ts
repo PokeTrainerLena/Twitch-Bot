@@ -22,46 +22,50 @@ export class LurkCommand extends CommandExecutor {
             this.canSend = false;
 
             const username = sender.userInfo.userName;
-            this.lurkHandler.add(username);
+
+            var lurkType = "lurk";
 
             switch (command) {
-                case "lurk":
-                case "afk":
-                case "klo":
-                    var nachricht = lurk["lurk"];
-                    break;
                 case "duschlurk":
                 case "badlurk":
-                    var nachricht = lurk["duschlurk"];
+                    lurkType = "duschlurk";
                     break;
                 case "gaminglurk":
                 case "zockerlurk":
                 case "spielelurk":
-                    var nachricht = lurk["gaminglurk"];
+                    lurkType = "gaminglurk";
                     break;
                 case "kochlurk":
-                    var nachricht = lurk["kochlurk"];
+                    lurkType = "kochlurk";
                     break;
                 case "schlaflurk":
-                    var nachricht = lurk["schlaflurk"];
+                    lurkType = "schlaflurk";
                     break;
                 case "esslurk":
-                    var nachricht = lurk["esslurk"];
+                    lurkType = "esslurk";
                     break;
                 default:
-                    var nachricht = lurk["lurk"];
+                    lurkType = "lurk";
                     break;
             }
-            
+            var nachricht = lurk["lurk"];
+            for (const [key, value] of Object.entries(lurk)) {
+                if (key == lurkType) {
+                    nachricht = value;
+                }
+            }
+
+            this.lurkHandler.add(username, lurkType);
+
             var replacment1: Replacment = { key: "%NAME%", value: this.getName(username) };
             var replacment2: Replacment = { key: "%ZAHL%", value: this.lurkHandler.getLength().toString() };
             if (this.lurkHandler.getLength() === 1) {
-                this.sendMessage(chatClient, channel, nachricht["ersterLurker"], { replacment: [replacment1, replacment2],reply_id: sender.id });
-          
-              } else {
-                this.sendMessage(chatClient, channel, nachricht["mehrereLurker"], { replacment: [replacment1, replacment2],reply_id: sender.id });
-          
-              }
+                this.sendMessage(chatClient, channel, nachricht["ersterLurker"], { replacment: [replacment1, replacment2], reply_id: sender.id });
+
+            } else {
+                this.sendMessage(chatClient, channel, nachricht["mehrereLurker"], { replacment: [replacment1, replacment2], reply_id: sender.id });
+
+            }
 
             var that = this;
             setTimeout(function () {
@@ -92,13 +96,18 @@ export class UnlurkCommand extends CommandExecutor {
 
             const username = sender.userInfo.userName;
 
-
-
+            var lurkType = this.handler.getLurkType(username);
+            var nachricht = unlurk["lurk"];
+            for (const [key, value] of Object.entries(unlurk)) {
+                if (key == lurkType) {
+                    nachricht = value;
+                }
+            }
             var replacment1: Replacment = { key: "%NAME%", value: this.getName(username) };
-            this.sendMessage(chatClient, channel, unlurk, { replacment: [replacment1], reply_id: sender.id });
+            this.sendMessage(chatClient, channel, nachricht, { replacment: [replacment1], reply_id: sender.id });
 
 
-            if (this.handler.get().find(user => user === username)) {
+            if (this.handler.findUser(username)) {
                 this.handler.remove(username);
             }
 

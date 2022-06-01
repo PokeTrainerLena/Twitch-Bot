@@ -19,11 +19,12 @@ import {ChatClient} from "@twurple/chat"
 import {AuthProvider} from "@twurple/auth"
 import { env } from "process";
 import { CHANNEL } from "./utils/constants";
+import { PollCommand } from "./commands/poll_command";
 //import { CheerListener } from "./listeners/follwers/cheer_listener";
 
 //const
 const lurkHandler = new LurkHandler();
-const soHandler = new LurkHandler(["poketrainer_lena"]);
+const soHandler = new LurkHandler([CHANNEL]);
 //const commands = new Map();
 
 // Lucario <3
@@ -74,6 +75,7 @@ export class TwitchBot {
         this.commandManger.add(new SoCommand());
         this.commandManger.add(new SocialCommand());
         this.commandManger.add(new UnlurkCommand(lurkHandler));
+        this.commandManger.add(new PollCommand());
         
         
 
